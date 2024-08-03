@@ -1,0 +1,51 @@
+.homeintro-main {
+  background-color: #fde9e9;
+  align-items: center;
+  padding-left: 130px;
+  padding-right: 90px;
+  padding-top: 60px;
+  
+}
+.homeintro-main h1 {
+  font-size: 43px;
+  margin-bottom: 20px;
+  font-family: "Fira Sans", sans-serif;
+  line-height: 1em;
+  color: #173f5f;
+  font-weight: 700;
+}
+
+.homeintro-main p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.homeintro-btn {
+
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  border-radius: 32px;
+  background:  #B3001A;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.homeintro-btn-group .homeintro-btn:hover {
+  background-color: darkred;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 786px) {
+  .homeintro-main {
+    padding-top: 4vh;
+    background-color: #fde9e9;
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+}

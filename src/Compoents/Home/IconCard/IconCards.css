@@ -1,0 +1,22 @@
+.icon-container {
+  background-color: #f60640;
+  border-radius: 30px;
+  padding: 50px;
+  width: 78%;
+}
+
+.icon-box {
+  color: white;
+}
+
+.icon-box i {
+  font-size: 40px;
+}
+
+.bloc {
+  color: aliceblue;
+}
+
+.icon-box p {
+  font-size: 16px;
+}

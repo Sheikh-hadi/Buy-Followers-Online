@@ -1,0 +1,55 @@
+.selectservice-main{
+   text-align: center;
+   padding-top: 70px;
+}
+.selectservice-main h1{
+    color: #172b43;
+    font-family: "Fira Sans", Sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+}
+.selectservice-main p{
+    font-size: 21px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+.button-services {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .btn-ig {
+    margin-left: 40px;
+    display: block;
+    width: 32%;
+    font-size: 15px;
+    background-color: #e63946;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+    border: none;
+  }
+  
+  .btn-tk {
+    margin-left: 26px;
+    font-size: 15px;
+    height: 50px;
+    display: block;
+    background-color: #c9c9c9;
+    width: 30%;
+    color: #050505;
+    padding: 10px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+    border: 2px solid red;
+  }
+  
+  .btn-tk:hover {
+    background-color: red;
+  }
+  
+  .btn-ig:hover {
+    background-color: red;
+  }
+  

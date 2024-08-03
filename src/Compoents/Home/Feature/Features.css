@@ -1,0 +1,26 @@
+.features-container {
+  margin-bottom: 60px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.feature-number {
+  font-size: 40px;
+  color: #b30b0b;
+  margin-right: 10px;
+}
+
+.feature-title {
+  font-size: 18px;
+  color: #173f5f;
+  margin-bottom: 5px;
+}
+
+.feature-description {
+  font-size: 16px;
+  color: #555;
+}
