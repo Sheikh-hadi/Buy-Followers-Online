@@ -49,10 +49,10 @@ const Header = () => {
               </ul>
             </div>
             <div className="col-sm-1 col-md-2 col-lg-2 ">
-              <a href="/" className="text-decoration-none nav-bar-a">Blog</a>
+              <a href="/Blog" className="text-decoration-none nav-bar-a">Blog</a>
             </div>
             <div className="col-sm-1 col-md-2 col-lg-2 ">
-              <a href="/" className="text-decoration-none nav-bar-a">Contact</a>
+              <a href="/ContactUs" className="text-decoration-none nav-bar-a">Contact Us</a>
             </div>
           </div>
         </div>
