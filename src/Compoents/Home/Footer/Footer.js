@@ -1,15 +1,16 @@
-import React from 'react';
-import './Footer.css';
+import React from "react";
+import "./Footer.css";
 
-const Footer = () => {
+export default function Footer() {
   return (
-    <footer className="footer bg-dark text-white">
-      <div className="container">
-        <div className="row">
-          <div className="col-md-3">
+    <div>
+      <footer>
+        <div  className="row">
+          <div className="col-md-3 mb-4 footer-section">
             <div className="vlline">
               <div className="vl"></div>
               <h3>SERVICES</h3>
+              <br />
             </div>
             <ul className="list-unstyled">
               <li>IG Followers</li>
@@ -19,7 +20,7 @@ const Footer = () => {
               <li>Insta Views</li>
             </ul>
           </div>
-          <div className="col-md-3">
+          <div className="col-md-3 mb-4 footer-section">
             <div className="vlline">
               <div className="vl"></div>
               <h3>ABOUT US</h3>
@@ -31,7 +32,7 @@ const Footer = () => {
               <li>Blog</li>
             </ul>
           </div>
-          <div className="col-md-3">
+          <div className="col-md-3 mb-4 footer-section">
             <div className="vlline">
               <div className="vl"></div>
               <h3>POLICIES</h3>
@@ -42,7 +43,7 @@ const Footer = () => {
               <li>Terms & Conditions</li>
             </ul>
           </div>
-          <div className="col-md-3">
+          <div className="col-md-3 mb-4 footer-section">
             <div className="vlline">
               <div className="vl"></div>
               <h3>CONTACT</h3>
@@ -54,18 +55,49 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="footer-bottom text-center mt-4">
-          <p>Copyright &copy; 2024 buyfollowersaustralia</p>
-          <div className="social-icons">
-            <a href="/"><i className="fab fa-facebook-f"></i></a>
-            <a href="/"><i className="fab fa-twitter"></i></a>
-            <a href="/"><i className="fab fa-tiktok"></i></a>
-            <a href="/"><i className="fab fa-instagram"></i></a>
+        <div
+          
+          className="row footer-bottom"
+        >
+          {/* <p>Copyright © 2024 buyfollowersaustralia</p> */}
+          {/* <div className=" col-md-3 mb-4social-icons">
+            <a href="/">
+              <i className="fab fa-facebook-f"></i>
+            </a>
+            <a href="/">
+              <i className="fab fa-twitter"></i>
+            </a>
+            <a href="/">
+              <i className="fab fa-tiktok"></i>
+            </a>
+            <a href="/">
+              <i className="fab fa-instagram"></i>
+            </a>
+          </div> */}
+          <div className="d-flex ">
+          {/* <p className="">Copyright © 2024 buyfollowersaustralia</p> */}
+          <div className=" text-white">
+  <p className="mb-1">Copyright © 2024 buyfollowersaustralia</p>
+</div>
+            <ul className="list-unstyled d-flex justify-content-end w-100 m-0">
+
+              <li className="px-2 ">
+                <a href="/"><i className="text-white fab fa-facebook"></i></a>
+              </li>
+              <li className="px-2">
+                <a href="/"><i className="text-white fab fa-twitter"></i></a>
+              </li>
+               <li className="px-2">
+                <a href="/"><i className="text-white fab fa-tiktok"></i></a>
+              </li> 
+              <li className="px-2">
+                <a href="/"><i className="text-white fab fa-instagram"></i></a>
+              </li>
+            
+            </ul>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   );
-};
-
-export default Footer;
+}
