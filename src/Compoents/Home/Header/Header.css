@@ -1,4 +1,43 @@
-.nav-bar-logo{
-    align-items: center;
-    margin: 33px;
+
+.nav-bar-a {
+    color: #1a202c;
+    font-size: 18px !important;
+    font-weight: 900 !important;
+    line-height: 1.3em !important;
+    font-family: "Fira Sans", "Sans-serif" !important;
 }
+
+.nav-bar-a:hover {
+    color: red;
+}
+
+.model-list {
+    list-style: none;
+}
+
+.model-list a {
+    text-decoration: none;
+    color: #1a202c;
+    font-size: 18px !important;
+    font-weight: 900 !important;
+    line-height: 1.3em !important;
+    font-family: "Fira Sans", "Sans-serif" !important;
+}
+.mobile-view {
+    display: none;
+    /* Hide by default */
+}
+
+@media (max-width: 756px) {
+    .nav-bar-list {
+        display: none;
+        /* Hide navbar buttons on mobile */
+    }
+
+    .mobile-view {
+        border: 2px solid black;
+        display: block;
+    }
+   
+}
+
