@@ -5,7 +5,6 @@ import SelService from "../Compoents/Home/SelectService/SelService";
 import IconCards from "../Compoents/Home/IconCard/IconCards";
 import Process from "../Compoents/Home/Process/Process";
 import Packages from "../Compoents/Home/Package/Packages";
-import CardFollwers from "../Compoents/Home/CardFollwer/CardFollwers";
 import KeyFeatures from "../Compoents/Home/KeyFeature/KeyFeatures";
 import Features from "../Compoents/Home/Feature/Features";
 import Footer from "../Compoents/Home/Footer/Footer";
@@ -16,7 +15,6 @@ const Home = () => {
       <Header />
       <HomeIntro />
       <SelService/>
-      <CardFollwers/>
       <IconCards/>
       <Process/>
       <Packages/>
