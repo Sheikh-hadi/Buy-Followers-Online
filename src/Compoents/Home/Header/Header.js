@@ -58,23 +58,23 @@ const Header = () => {
         </div>
       </div>
 
-      <div style={{ border: "2px solid black" }} className=" nav-bar mobile-view" >
-        <div style={{ border: "2px solid black" }} className="col-xs-2 col-sm-6 col-md-4 col-lg-4" >
-          <img style={{ border: "2px solid black" }} src="logo.png" alt="Logo" />
+      <div  className=" nav-bar mobile-view" >
+        <div  className="col-xs-2 col-sm-6 col-md-4 col-lg-4" >
+          <img  src="logo.png" alt="Logo" />
         </div>
-        <div style={{ border: "2px solid black" }} className=" flex col-xs-6 col-sm-6 col-md-6 col-lg-6 " >
+        <div  className=" flex col-xs-6 col-sm-6 col-md-6 col-lg-6 " >
           <MenuUnfoldOutlined style={{
             fontSize: "40px"
           }}
            onClick={showModal} />
           <Modal placement="bottom" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
             <ul>
-              <li className='model-list'><a href='#'>Home</a></li>
-              <li className='model-list'><a href='#'>About Us</a></li>
-              <li className='model-list'><a href='#'>Instagram</a></li>
-              <li className='model-list'><a href='#'>TikTok</a></li>
-              <li className='model-list'><a href='#'>Blog</a></li>
-              <li className='model-list'><a href='#'>Contact Us</a></li>
+              <li className='model-list'><a href='/'>Home</a></li>
+              <li className='model-list'><a href='/'>About Us</a></li>
+              <li className='model-list'><a href='/'>Instagram</a></li>
+              <li className='model-list'><a href='/'>TikTok</a></li>
+              <li className='model-list'><a href='/'>Blog</a></li>
+              <li className='model-list'><a href='/'>Contact Us</a></li>
             </ul>
           </Modal>
         </div>
