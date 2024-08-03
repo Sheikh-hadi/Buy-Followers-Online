@@ -2,12 +2,16 @@
   padding: 20px 0;
 }
 
-.blogs-title {
+.blog-header {
+  width: 100%;
+  background-color: #ee1535;
+}
+
+.bl {
+  padding: 30px;
+  font-size: 40px;
   text-align: center;
-  background-color: red;
-  color: white;
-  padding: 10px 0;
-  margin-bottom: 30px;
+  color: aliceblue;
 }
 
 .card {
@@ -22,13 +26,14 @@
 
 .card-title {
   font-weight: bold;
-  font-size: 18px;
+  color: #2d3748;
+  font-size: 20px;
+  line-height: 1.5;
 }
 
 .btn-danger {
   background-color: red;
-  border-radius: 30px
- 
+  border-radius: 30px;
 }
 
 .btn-danger:hover {

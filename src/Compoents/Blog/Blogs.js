@@ -7,30 +7,28 @@ const Blogs = () => {
       id: 1,
       title: 'How To Transfer TikTok Drafts Onto Another Phone',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut ullamcorper tortor.',
-      image: 'blog-card1.png', // replace with actual image path
+      image: 'blog-card1.png',
     },
     {
       id: 2,
       title: 'How To Transfer TikTok Drafts Onto Another Phone',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut ullamcorper tortor.',
-      image: 'blog-card1.png', // replace with actual image path
+      image: 'blog-card1.png', 
     },
     {
       id: 3,
       title: 'How To Transfer TikTok Drafts Onto Another Phone',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut ullamcorper tortor.',
-      image: 'blog-card1.png', // replace with actual image path
+      image: 'blog-card1.png', 
     },
   ];
 
   return (
     <div className="blogs-container">
+      <div className="blog-header">
+        <h1 className='bl'>BLOG</h1>
+      </div>
       <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <h2 className="blogs-title">BLOG</h2>
-          </div>
-        </div>
         <div className="row">
           {blogData.map((blog) => (
             <div className="col-md-4 mb-4" key={blog.id}>
