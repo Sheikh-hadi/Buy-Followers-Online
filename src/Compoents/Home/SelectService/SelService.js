@@ -92,15 +92,15 @@ const SelService = () => {
         </div>
       </div>
       <div className="container mt-5">
-        <div className="row justify-content-center">
+        <div className="row justify-content-center p-1">
           {cardFollowersData.map((card, index) => (
-            <div key={index} className="col-lg-3 col-md-6 mb-4 card package-card-follower">
+            <div key={index} className="col-lg-3 col-md-6  card">
               <div className="card-body">
                 <h5 className="card-title">{card.title}</h5>
                 <h6 className="card-price">{card.price}</h6>
                 <ul className="list-unstyled">
                   {card.description.map((listItem, index) => (
-                    <li key={index}><i className="fas fa-check-circle"></i> {listItem}</li>
+                    <li className='' key={index}><i className="fas fa-check-circle"></i> {listItem}</li>
                   ))}
                 </ul>
                 <button onClick={() => handleClick(card.link)} className="btn btn-primary buy-now-btn">Buy Now</button>

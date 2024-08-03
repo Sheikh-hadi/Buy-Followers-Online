@@ -6,7 +6,7 @@ const Packages = () => {
     <div className="container mt-4">
       <div className="row">
         <div className="col-lg-4 col-md-6 mb-4">
-          <div className="card package-card1">
+          <div className="card package-card">
             <div className="card-body">
               <div className="d-flex justify-content-between align-items-center mb-3">
                 <i className="fas fa-shopping-cart icon"></i>
@@ -24,7 +24,7 @@ const Packages = () => {
           </div>
         </div>
         <div className="col-lg-4 col-md-6 mb-4">
-          <div className="card package-card2">
+          <div className="card package-card">
             <div className="card-body">
               <div className="d-flex justify-content-between align-items-center mb-3">
                 <i className="fas fa-mail-bulk icon"></i>
@@ -42,7 +42,7 @@ const Packages = () => {
           </div>
         </div>
         <div className="col-lg-4 col-md-6 mb-4">
-          <div className="card package-card3">
+          <div className="card package-card">
             <div className="card-body">
               <div className="d-flex justify-content-between align-items-center mb-3">
                 <i className="fas fa-money-check-alt icon"></i>
