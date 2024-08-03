@@ -1,0 +1,36 @@
+.blogs-container {
+  padding: 20px 0;
+}
+
+.blogs-title {
+  text-align: center;
+  background-color: red;
+  color: white;
+  padding: 10px 0;
+  margin-bottom: 30px;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.btn-danger {
+  background-color: red;
+  border-radius: 30px
+ 
+}
+
+.btn-danger:hover {
+  background-color: darkred;
+}
