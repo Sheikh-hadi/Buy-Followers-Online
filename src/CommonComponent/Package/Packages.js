@@ -1,5 +1,4 @@
 import React from 'react';
-import './Packages.css';
 
 const Packages = (props) => {
   let cardList = props.cards;

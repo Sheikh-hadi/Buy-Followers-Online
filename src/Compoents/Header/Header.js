@@ -30,7 +30,7 @@ const Header = () => {
               <a href="/" className="text-decoration-none nav-bar-a">Home</a>
             </div>
             <div className="col-sm-1 col-md-2 col-lg-2 ">
-              <a href="/aboutUs" className="text-decoration-none nav-bar-a">About Us</a>
+              <a href="/about" className="text-decoration-none nav-bar-a">About Us</a>
             </div>
             <div className="col-sm-1 col-md-2 col-lg-2 dropdown ">
               <a href="#" className="text-decoration-none nav-bar-a dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Instagram</a>
@@ -44,9 +44,9 @@ const Header = () => {
             <div className="col-sm-1 col-md-2 col-lg-2 dropdown ">
               <a href="#" className="text-decoration-none nav-bar-a dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">TikTok</a>
               <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="/tiktokfollowers">TikTok Followers</a></li>
-                <li><a className="dropdown-item" href="/tiktoklikes">TikTok Likes</a></li>
-                <li><a className="dropdown-item" href="/tiktokviews">TikTok Views</a></li>
+                <li><a className="dropdown-item" href="/buytiktokfollowers">Buy TikTok Followers</a></li>
+                <li><a className="dropdown-item" href="/buytiktoklikes">Buy TikTok Likes</a></li>
+                <li><a className="dropdown-item" href="/buytiktokviews">Buy TikTok Views</a></li>
               </ul>
             </div>
             <div className="col-sm-1 col-md-2 col-lg-2 ">
