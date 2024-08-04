@@ -1,7 +1,7 @@
 import React from 'react'
-import ContactIntro from '../Compoents/Contacts/ContactIntro'
-import Header from '../Compoents/Home/Header/Header'
-import Footer from '../Compoents/Home/Footer/Footer'
+import ContactIntro from '../Compoents/ContactUsComponent/ContactIntro'
+import Header from '../Compoents/Header/Header'
+import Footer from '../Compoents/Footer/Footer'
 
 const ContactUs = () => {
   return (

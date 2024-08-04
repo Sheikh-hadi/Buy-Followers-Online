@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from '../Compoents/Home/Header/Header'
-import Footer from '../Compoents/Home/Footer/Footer'
+import Header from '../Compoents/Header/Header'
+import Footer from '../Compoents/Footer/Footer'
 const InstagramFollowers = () => {
     return (
         <>
