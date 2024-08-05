@@ -42,11 +42,12 @@ color: #333;
 
 .social-icons i:hover {
   color: #d0021b;
+transform: scale(1.6);
 }
 
 .contact-form {
   background-color: #ced1d52c;
-  padding: 20px ;
+  padding: 60px 40px;
   margin-top: -50px;
   border: 2px solid rgb(182, 177, 177);
   border-radius: 8px;

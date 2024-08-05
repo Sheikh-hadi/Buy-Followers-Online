@@ -5,14 +5,15 @@ export default function Footer() {
   return (
     <div>
       <footer>
-        <div  className="row">
-          <div className="col-md-3 mb-4 footer-section">
-            <div className="vlline">
-              <div className="vl"></div>
-              <h3>SERVICES</h3>
+        <div  className="row" style={{border:"2px solid black"}}>
+          <div className="col-md-3 col-sm-8 col-lg-3 mb-4 footer-section" style={{ border: "2px solid black" }}>
+            <div className="vlline" style={{ border: "2px solid black" }}>
+              <div className="vl" style={{ border: "2px solid black" }}></div>
+              <h3 style={{ border: "2px solid black" }}>SERVICES</h3>
               <br />
             </div>
-            <ul className="list-unstyled">
+
+            <ul className="list-unstyled" style={{ border: "2px solid black" }}>
               <li>IG Followers</li>
               <li>IG Likes</li>
               <li>TikTok Followers</li>
