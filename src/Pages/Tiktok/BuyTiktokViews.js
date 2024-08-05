@@ -1,8 +1,10 @@
 import React from 'react'
+import Pricing from '../../CommonComponent/Pricing/Pricing'
+import buyTiktokViewPricingModel from '../../Model/PricingModel/Tiktok/buyTiktokViewsPricingModel'
 
 const BuyTiktokViews = () => {
   return (
-    <div>BuyTiktokViews</div>
+  <Pricing price={buyTiktokViewPricingModel}/>
   )
 }
 

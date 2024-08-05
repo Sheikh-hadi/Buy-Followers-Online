@@ -14,7 +14,7 @@ const Accordian = (props) => {
                 <div className='col-6'>
                     <Space direction="vertical">
                         {AccordianModelLeft.map((li, index) => (
-                    <Collapse className="full-width-collapse" defaultActiveKey={['1']}>
+                    <Collapse className="full-width-collapse" >
                             <Panel header={li.title} key={index}>
                                 <p>{li.text}</p>
                             </Panel>
@@ -25,7 +25,7 @@ const Accordian = (props) => {
                 <div className='col-6'>
                     <Space direction="vertical">
                         {accordianModelRight.map((li, index) => (
-                            <Collapse className="full-width-collapse" defaultActiveKey={['1']}>
+                            <Collapse className="full-width-collapse" >
                                 <Panel header={li.title} key={index}>
                                     <p>{li.text}</p>
                                 </Panel>
