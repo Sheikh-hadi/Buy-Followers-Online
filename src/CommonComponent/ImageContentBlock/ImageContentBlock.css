@@ -1,3 +1,9 @@
+.container{
+    align-items: center;
+   
+}
+
+
 .heading {
     line-height: 1.2em !important;
     font-weight: 800 !important;

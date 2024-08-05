@@ -1,6 +1,6 @@
 const buyTiktokFollowersPricingModel =
 {
-    title: "Boost Your TikTok With Real Followers!",
+    title: "Boost Your TikTok With Real Followers! 🚀 Buy TikTok followers in Australia",
 
     description: "BuyFollowersAustralia.com makes it easy and quick to get more people to interact with you on Instagram. Our high-quality, instant service will make your account more trustworthy and help boost your business sales. Our process is quick, safe, and secure. Choose your package and see a boost on your Instagram profile.",
     boxes: [

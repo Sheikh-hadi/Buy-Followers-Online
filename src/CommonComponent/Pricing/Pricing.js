@@ -27,8 +27,9 @@ const Pricing = (props) => {
         
             <div className='row'>
                 <div className='col-lg-6'>
-                    <h1> {value.title}  </h1>
-                    <p>{value.description}</p>
+                    <h1 className='Heading'> {value.title}  </h1>
+                    <p className='para'>{value.description}</p>
+                   <div className='btn-1'><button className='butn' onClick={buyNow}>Read More</button></div> 
                 </div>
                 <div className='col-lg-6'>
                     <div className='main-box'>
