@@ -2,7 +2,6 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    border: 2px solid black;
 }
 
 .main {
@@ -13,6 +12,10 @@
 
 .full-width-collapse {
     width: 100%;
+}
+
+.open-panel-header .ant-collapse-header {
+    color: red !important;
 }
 
 /* Adjust margins for smaller screens */
