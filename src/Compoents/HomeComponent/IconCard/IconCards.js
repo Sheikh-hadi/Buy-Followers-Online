@@ -29,7 +29,7 @@ const IconCards = () => {
           return (
             <div className="col-6 col-md-3 text-center mb-4">
               <div className="icon-box">
-                <i className={iconCard.icon}></i>
+                <i className={iconCard.icon}  ></i>
                 <p className="bloc">{iconCard.text}</p>
               </div>
             </div>

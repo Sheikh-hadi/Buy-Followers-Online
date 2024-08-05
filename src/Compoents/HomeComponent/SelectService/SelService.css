@@ -58,70 +58,42 @@
 }
 
 /* Card CSS */
-
-.package-card-follower,
-.package-card-auto-likes,
-.package-card-likes,
-.package-card-views {
+.card {
   border: 1px solid #ddd;
   border-radius: 10px;
   background-color: #f5f6f700;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.package-card-follower:hover,
-.package-card-auto-likes:hover,
-.package-card-likes:hover,
-.package-card-views:hover {
+.card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-.package-card-follower .card-title,
-.package-card-auto-likes .card-title,
-.package-card-likes .card-title,
-.package-card-views .card-title {
+.card-title {
   color: #f60640;
   font-size: 14px;
 }
 
-.package-card-follower .buy-now-btn,
-.package-card-auto-likes .buy-now-btn,
-.package-card-likes .buy-now-btn,
-.package-card-views .buy-now-btn {
+.buy-now-btn {
   background-color: #f60640;
   border: none;
 }
 
-.package-card-follower .card-price,
-.package-card-auto-likes .card-price,
-.package-card-likes .card-price,
-.package-card-views .card-price {
+.card-price {
   font-size: 1.5rem;
   color: #333;
   margin: 0.5rem 0;
 }
-
-.package-card-follower ul,
-.package-card-auto-likes ul,
-.package-card-likes ul,
-.package-card-views ul {
+ ul {
   padding-left: 0;
 }
-
-.package-card-follower ul li,
-.package-card-auto-likes ul li,
-.package-card-likes ul li,
-.package-card-views ul li {
+ li {
   list-style: none;
   margin: 0.5rem 0;
   color: #666;
 }
-
-.package-card-follower ul li i,
-.package-card-auto-likes ul li i,
-.package-card-likes ul li i,
-.package-card-views ul li i {
+ i {
   color: #f60640;
   margin-right: 0.5rem;
 }

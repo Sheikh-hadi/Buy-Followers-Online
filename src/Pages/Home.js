@@ -1,28 +1,26 @@
 import React from "react";
-import Header from "../Compoents/Home/Header/Header";
-import HomeIntro from "../Compoents/Home/HomeIntro/HomeIntro";
-import SelService from "../Compoents/Home/SelectService/SelService";
-import IconCards from "../Compoents/Home/IconCard/IconCards";
-import Process from "../Compoents/Home/Process/Process";
-import Packages from "../Compoents/Home/Package/Packages";
-import KeyFeatures from "../Compoents/Home/KeyFeature/KeyFeatures";
-import Features from "../Compoents/Home/Feature/Features";
-import Footer from "../Compoents/Home/Footer/Footer";
+import HomeIntro from "../Compoents/HomeComponent/HomeIntro/HomeIntro";
+import SelService from "../Compoents/HomeComponent/SelectService/SelService";
+import IconCards from "../Compoents/HomeComponent/IconCard/IconCards";
+import Process from "../Compoents/HomeComponent/Process/Process";
+import Packages from "../CommonComponent/Package/Packages";
+import KeyFeatures from "../Compoents/HomeComponent/KeyFeature/KeyFeatures";
+import Features from "../Compoents/HomeComponent/Feature/Features";
 
-const Home = () => {
+import homePackagescard from "../Model/PackagesCardsModel/homePackagesCards";
+const Home = ( ) => {
+ 
   return (
     <div>
-      <Header />
       <HomeIntro />
-      <SelService/>
-      <IconCards/>
-      <Process/>
-      <Packages/>
-      <KeyFeatures/>
-      <Features/>
-     <Footer/>
-     
-  
+      <SelService />
+      <IconCards />
+      <Process />
+      <Packages cards= {homePackagescard} />
+      <KeyFeatures />
+      <Features />
+
+
     </div>
   );
 };
