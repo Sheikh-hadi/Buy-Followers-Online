@@ -10,7 +10,7 @@ const Accordian = (props) => {
     
     return (
         <div className='container mt-4'>
-            <div className='row g-3'>
+            <div className='row g-3'> 
                 <div className='col-6'>
                     <Space direction="vertical">
                         {AccordianModelLeft.map((li, index) => (

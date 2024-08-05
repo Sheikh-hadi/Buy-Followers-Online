@@ -1,59 +1,70 @@
-.contact-us {
-  background-color: white;
+.contact-header {
+  background-color: #d0021b;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
 }
 
-.contact-us .container {
-  padding: 50px 0;
+.contact-section {
+  padding: 150px 0;
 }
-
-.contact-us h1 {
-  color: red;
-  font-size: 48px;
+.contact-section h2
+{    font-family: "Fira Sans", Sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: #172b43;
+  line-height: 1.9em;
 }
-
-.contact-us .btn-danger {
-  background-color: red;
-  border-color: red;
-}
-
-.contact-us h2 {
-  font-size: 24px;
-  color: #333;
-}
-
-.contact-us .highlight {
-  color: red;
-}
-
-.contact-us p {
+.contact-section p
+{font-family: "DM Sans", Sans-serif;
   font-size: 16px;
-  color: #666;
+  font-weight: 400;
+  line-height: 1.5em;}
+.social-icons i {
+  font-size: 20px;
+  /* justify-content: center;  */
+  /* justify-items: center; */
+
+color: #333;
+}
+.icon-circle {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  line-height: 50px;
+  margin-right: 20px;
+  font-size: 5px;
+  background-color: #F5F6F700;
+ 
 }
 
-.contact-us .social-icons {
-  margin-top: 20px;
+
+.social-icons i:hover {
+  color: #d0021b;
 }
 
-.contact-us .social-icons i {
-  font-size: 24px;
-  color: #666;
-  margin-right: 10px;
+.contact-form {
+  background-color: #ced1d52c;
+  padding: 20px ;
+  margin-top: -50px;
+  border: 2px solid rgb(182, 177, 177);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.contact-us .form-group {
-  margin-bottom: 15px;
+.contact-form h3 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.contact-us .form-control {
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 5px;
+.form-control {
+  margin-bottom: 20px;
 }
 
-.contact-us .btn-danger {
-  background-color: red;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 5px;
+.btn-danger {
+  background-color: #d0021b;
+  border-color: #d0021b;
+  border-radius: 4px;
+  
 }
