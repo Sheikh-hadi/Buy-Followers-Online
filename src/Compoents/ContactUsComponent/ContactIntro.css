@@ -42,6 +42,7 @@ color: #333;
 
 .social-icons i:hover {
   color: #d0021b;
+transform: scale(1.6);
 }
 
 .contact-form {

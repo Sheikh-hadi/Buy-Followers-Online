@@ -36,10 +36,10 @@ const ContactIntro = () => {
                       <input type="text" className="form-control " placeholder="Your Name" style={{ height: "50px" }} />
                     </div>
                     <div className='row'>
-                      <div className="col-6 form-group">
+                      <div className="col-xs-12 col-sm-12 col-lg-6 form-group ">
                         <input type="email" className="form-control" placeholder="Your Email" style={{ height: "50px" }} />
                       </div>
-                      <div className="col-6 form-group ">
+                      <div className="col-xs-12 col-sm-12 col-lg-6 form-group ">
                         <input type="tel" className="form-control" placeholder="Your Phone" style={{ height: "50px" }} />
                       </div>
                     </div>
@@ -47,7 +47,9 @@ const ContactIntro = () => {
                   <div className="form-group">
                     <textarea className="form-control" placeholder="How Can we Help You?" rows="4"></textarea>
                   </div>
+                  <div style={{display:"flex", justifyContent:"center"}}>
                   <button type="submit" className="btn btn-danger">Submit Message</button>
+                  </div>
                 </form>
               </div>
             </div>
