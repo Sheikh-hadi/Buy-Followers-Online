@@ -9,12 +9,14 @@
     font-weight: 800 !important;
     font-style: normal !important;
     font-family: "Fira Sans", Sans-serif !important;
-    color: #0e0e0e !important;
+    color: #172b43 !important;
     font-size: 20px;
+    padding: 0px 35px;
+    margin-bottom: 30px;
 }
 
 .para{
-    font-size: 16px !important;
+    font-size: 17px !important;
         color: #5e6d64 !important;
         line-height: 1.6em !important;
         font-weight: 400 !important;

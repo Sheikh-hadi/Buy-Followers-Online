@@ -72,15 +72,15 @@
     padding: 0px 35px;
 }
 .butn {
+  border: none;
   display: block;
-
   align-items: center;
   border-radius: 45px;
   background-color: #f51636;
   padding: 8px;
   color: white;
   width: 30%;
-  border-radius: 25px;
+  /* border-radius: 25px; */
 }
 .main-button {
   font-family: DM-Sans;
@@ -88,6 +88,7 @@
   padding: 8px;
   background-color: #f51636;
   color: #fff;
+  border: none;
   border-radius: 25px;
   cursor: pointer;
   display: block;
@@ -110,12 +111,15 @@
   border-color: red;
 }
 
+.btn-1:hover{
+ color: rgb(234, 68, 68);
+}
 .inner-box.selected h6 {
   color: white;
 }
 
 .main-button:hover {
-  background-color: blue;
+  background-color: rgb(234, 68, 68);
 }
 
 .output-container {

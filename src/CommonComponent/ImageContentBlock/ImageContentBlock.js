@@ -15,7 +15,7 @@ const ImageContentBlock = (props) => {
                             {(block.id % 2 === 0) ?
                                 <>
                                     <div className='col-4'>
-                                        <img src={block.image} alt='Packages at Low Prices' style={{ height: "240px", alignContent: "center" }} />
+                                        <img src={block.image} alt='Packages at Low Prices' style={{margin: "-48px  30px ", height: "250px", alignContent: "center" }} />
                                     </div>
                                     <div className='col-8'>
                                         <h1 className='heading'>{block.title}</h1>
@@ -29,7 +29,7 @@ const ImageContentBlock = (props) => {
                                         <p className='para'>{block.description}</p>
                                     </div>
                                     <div className='col-4'>
-                                        <img src={block.image} alt='Packages at Low Prices' style={{ height: "240px", alignContent: "center" }} />
+                                        <img src={block.image} alt='Packages at Low Prices' style={{margin: "-48px  30px ",height: "240px", alignContent: "center" }} />
                                     </div>
                                 </>
                             }

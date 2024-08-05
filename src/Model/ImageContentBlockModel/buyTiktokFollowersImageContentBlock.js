@@ -1,9 +1,10 @@
 import lowPrice from '../../assets/images/lowPrice.png';
-
+import blogCard1 from '../../assets/images/blogCard1.png'
+import blogCard2 from '../../assets/images/blogCard2.png'
 const buytiktokfollowersImageContentBlock = [
     {
         id: 1,
-        image: lowPrice,
+        image:blogCard1,
         title: "Get more TikTok Followers Fast",
         description: "Do you want more people to follow you on TikTok? InstaBoost is the best marketing company in Australia where you can buy TikTok fans. We give you real fans who will watch your videos and like and comment on them. This could help your movies become more well-known and get more views.",
     },
@@ -15,7 +16,7 @@ const buytiktokfollowersImageContentBlock = [
     },
     {
         id: 3,
-        image: lowPrice,
+        image: blogCard2,
         title: "Why TikTok Followers Are Important",
         description: "People who follow you will see and like your films more. That makes your account look well-known, which can help you get even more fans. Many fans can also make your business look good. This cheap way to get TikTok fans will help your account grow.",
     },
