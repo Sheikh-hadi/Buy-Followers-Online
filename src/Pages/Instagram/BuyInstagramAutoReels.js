@@ -1,13 +1,14 @@
 import React from 'react';
-import Packages from '../../CommonComponent/Package/Packages';
-import buyinstagramautoreels from "../../Model/PackagesCardsModel/buyInstagramAutoReelsPackagesCards";
 import Pricing from '../../CommonComponent/Pricing/Pricing';
+import Card from '../../CommonComponent/Card/Card';
+
 import buyInstagramAutoReelsPricingModel from '../../Model/PricingModel/Instagram/buyInstargamAutoReelsPricingModel';
+import buyInstagramAutoReelsCardModel from '../../Model/Card/buyInstagramAutoReelsCardModel';
 const BuyInstagramAutoReels = () => {
     return (
         <>
             <Pricing price={buyInstagramAutoReelsPricingModel} />
-            <Packages cards={buyinstagramautoreels} />
+            <Card card={buyInstagramAutoReelsCardModel} />
         </>
     )
 }
