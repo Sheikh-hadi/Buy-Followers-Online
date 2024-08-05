@@ -24,7 +24,6 @@ const Pricing = (props) => {
 
   return (
     <div className="container">
-      <h1> hello</h1>
       <div className="row">
         <div className="col-lg-6">
           <h1 className="Heading"> {value.title} </h1>
