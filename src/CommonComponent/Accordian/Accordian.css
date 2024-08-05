@@ -2,12 +2,29 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    border: 2px solid black;
 }
 
-.mt-4 {
+.main {
     margin-top: 1.5rem;
+    background: #EBE4E469;
+    padding: 0 20px;
 }
 
 .full-width-collapse {
-    width: 550px;
+    width: 100%;
+}
+
+/* Adjust margins for smaller screens */
+@media screen and (max-width: 786px) {
+    .full-width-collapse {
+        width: 100%;
+    }
+}
+
+/* Adjust padding for larger screens */
+@media screen and (min-width: 786px) {
+    .main {
+        padding: 0 60px;
+    }
 }
