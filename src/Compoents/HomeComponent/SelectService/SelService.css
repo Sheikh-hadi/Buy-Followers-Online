@@ -12,7 +12,6 @@
 
 .selectservice-main p {
   font-size: 21px;
-  /* margin-bottom: 30px; */
   line-height: 1.6;
 }
 
@@ -22,39 +21,52 @@
   padding: 0px 40px;
 }
 
-.btn-ig {
-  margin-right: 5px;
+.btn-ig, .btn-tk {
+  margin: 0 8px;
   display: block;
-  width: 100%;
   font-size: 15px;
-  background-color: #e63946;
-  color: #fff;
-  padding: 10px;
+  padding: 17px;
   border-radius: 50px;
   transition: background-color 0.3s ease;
   border: none;
+  width: 520px; /* Adjust the width as needed */
+}
+
+.btn-ig {
+  background-color: #e63946;
+  color: #fff;
+}
+
+.btn-ig.active {
+  background-color: #f51636;
+  color: white;
 }
 
 .btn-tk {
-  margin-left: 5px;
-  font-size: 15px;
-  height: 50px;
-  display: block;
   background-color: #c9c9c9;
-  width: 100%;
   color: #050505;
-  padding: 10px;
-  border-radius: 50px;
-  transition: background-color 0.3s ease;
-  border: 2px solid red;
+  border: 2px solid rgb(230, 26, 26);
+}
+
+.btn-tk.active {
+  background-color: #f51636;
+  color: white;
 }
 
 .btn-tk:hover {
-  background-color: red;
+  background-color: #f51636;
 }
 
 .btn-ig:hover {
-  background-color: red;
+  background-color: #cf1c31;
+}
+
+/* Make icons white */
+.btn-ig i, .btn-tk i {
+  color: white;
+}
+.btn-tk i {
+  color: rgb(11, 10, 10);
 }
 
 /* Card CSS */
@@ -85,15 +97,18 @@
   color: #333;
   margin: 0.5rem 0;
 }
- ul {
+
+ul {
   padding-left: 0;
 }
- li {
+
+li {
   list-style: none;
   margin: 0.5rem 0;
   color: #666;
 }
- i {
+
+i {
   color: #f60640;
   margin-right: 0.5rem;
 }

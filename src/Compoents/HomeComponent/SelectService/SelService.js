@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import './SelService.css'
+import React, { useState } from 'react';
+import './SelService.css';
+
 const SelService = () => {
   const [handleColor, SetHandleColor] = useState(false);
 
@@ -44,11 +45,12 @@ const SelService = () => {
 
   const handletiktokColor = () => {
     SetHandleColor(true);
-  }
+  };
 
   const handleClick = (link) => {
     window.location.href = link;
-  }
+  };
+
   return (
     <div>
       <div className="row selectservice-main">
@@ -57,36 +59,16 @@ const SelService = () => {
           <p>Select Your Required Service & Enjoy</p>
         </div>
         <div className="button-services">
-          <button style={handleClick ? {
-            background: "#f51636",
-            color: "white",
-            width: "100%",
-            border: "none",
-          }
-            :
-            {
-              color: "black",
-              width: "100%",
-              border: "2px solid black",
-            }}
-            className="btn-ig" onClick={handleInstagramColor}>
+          <button 
+            className={`btn-ig ${!handleColor ? 'active' : ''}`} 
+            onClick={handleInstagramColor}
+          >
             <i className="fab fa-instagram"></i>&nbsp;&nbsp;Instagram
           </button>
-          <button style={handleClick ? 
-            {
-              color: "black",
-              width: "100%",
-              border: "2px solid black",
-            }
-            :
-            {
-              background: "#f51636",
-              color: "white",
-              width: "100%",
-              border: "none",
-            }
-          }
-            className="btn-tk" onClick={handletiktokColor}>
+          <button 
+            className={`btn-tk ${handleColor ? 'active' : ''}`} 
+            onClick={handletiktokColor}
+          >
             <i className="fab fa-tiktok"></i>&nbsp;&nbsp;Tiktok
           </button>
         </div>
@@ -94,7 +76,7 @@ const SelService = () => {
       <div className="container mt-5">
         <div className="row justify-content-center p-1">
           {cardFollowersData.map((card, index) => (
-            <div key={index} className="col-lg-3 col-md-6  card">
+            <div key={index} className="col-lg-3 col-md-6 card">
               <div className="card-body">
                 <h5 className="card-title">{card.title}</h5>
                 <h6 className="card-price">{card.price}</h6>
@@ -110,8 +92,7 @@ const SelService = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default SelService
-
+export default SelService;
