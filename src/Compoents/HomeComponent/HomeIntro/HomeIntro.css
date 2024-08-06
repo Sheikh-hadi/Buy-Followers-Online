@@ -1,13 +1,23 @@
+/* Add this to center the .homeintro-main container */
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 00vh; Makes sure the container takes full height of the viewport */
+}
+
+/* Keep existing styles */
 .homeintro-main {
   background-color: #fde9e9;
-  align-items: center;
-  padding-left: 130px;
+  padding-left: 200px;
   padding-right: 90px;
-  padding-top: 60px;
-  
+  padding-top: 80px;
+  padding-bottom: 60px;
+  width: 100%; /* Ensures it takes full width available */
 }
+
 .homeintro-main h1 {
-  font-size: 43px;
+  font-size: 53px;
   margin-bottom: 20px;
   font-family: "Fira Sans", sans-serif;
   line-height: 1em;
@@ -22,12 +32,11 @@
 }
 
 .homeintro-btn {
-
   text-align: center;
   color: white;
   font-size: 12px;
   border-radius: 32px;
-  background:  #B3001A;
+  background: #B3001A;
   padding: 10px;
   margin-bottom: 10px;
 }
@@ -38,7 +47,7 @@
 
 .img-fluid {
   max-width: 100%;
-  height: auto;
+  height: 400px;
 }
 
 @media (max-width: 786px) {

@@ -3,7 +3,7 @@ import './HomeIntro.css';
 
 const HomeIntro = () => {
   return (
-    <div >
+    <div className="centered-container">
       <div className="row homeintro-main">
         <div className="col-sm-12 col-lg-6">
           <h1>Get Instant Fame with Buy Followers Australia</h1>

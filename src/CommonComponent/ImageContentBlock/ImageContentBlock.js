@@ -29,7 +29,7 @@ const ImageContentBlock = (props) => {
                                         <p className='para'>{block.description}</p>
                                     </div>
                                     <div className='col-4'>
-                                        <img src={block.image} alt='Packages at Low Prices' style={{margin: "-48px  30px ",height: "240px", alignContent: "center" }} />
+                                        <img src={block.image} alt='Packages at Low Prices' style={{margin: "-48px  1px ",height: "240px", alignContent: "center" }} />
                                     </div>
                                 </>
                             }
