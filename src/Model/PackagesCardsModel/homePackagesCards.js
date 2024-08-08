@@ -1,6 +1,6 @@
 const homePackagescards = [
     {
-        id: 1,
+        id: '01',
         icon: "fas fa-shopping-cart icon",
         title: "Select Your Package",
         description: "Pick a package from our list to find the right one. Let us help you get more followers, whether you want a little extra or a considerable boost. If you still need help finding what you need,let us know, and we can customize a package just for you! Click“Buy Now” to get started.",
@@ -9,7 +9,7 @@ const homePackagescards = [
                 backgroundColor: '#b981f2',
             },
             heading1: {
-                fontSize: "50px",
+                fontSize: "70px",
                 color: "#ffffff42",
                 margin: "0px",
             },
@@ -31,7 +31,7 @@ const homePackagescards = [
         }
     },
     {
-        id: 2,
+        id: '02',
         icon: "fas fa-mail-bulk icon",
         title: "Enter your information",
         description: "Pick a package from our list to find the right one. Let us help you get more followers, whether you want a little extra or a considerable boost.If you still need help finding what you need,let us know, and we can customize a package just for you! Click “Buy Now” to get started.",
@@ -40,7 +40,7 @@ const homePackagescards = [
                 backgroundColor: '#e3f8ec',
             },
             heading1: {
-                fontSize: "50px",
+                fontSize: "70px",
                 color: "#9dcca3",
                 margin: "0px",
             },
@@ -61,7 +61,7 @@ const homePackagescards = [
         }
     },
     {
-        id: 3,
+        id: '03',
         icon: "fas fa-money-check-alt icon",
         title: "Checkout",
         description: "Pick a package from our list to find the right one. Let us help you get more followers, whether you want a little extra or a considerable boost. If you still need help finding what you need,let us know, and we can customize a package just for you! Click“Buy Now” to get started.",
@@ -70,7 +70,7 @@ const homePackagescards = [
                 backgroundColor: '#cdf9fe',
             },
             heading1: {
-                fontSize: "50px",
+                fontSize: "70px",
                 color: "#48ac8c",
                 margin: "0px",
             },

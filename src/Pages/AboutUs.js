@@ -15,7 +15,6 @@ const AboutUs = () => {
     <Cards/>
     <Block/>
     <CenteredTextSection/>
-   
       <Accordian accordian={{accordianModelLeft, accordianModelRight}} />
     </>
   )

@@ -10,6 +10,7 @@ import instagramFollowersImageContentBlock from '../../Model/ImageContentBlockMo
 import { accordianModelLeft, accordianModelRight } from '../../Model/AccordianModel/instagramFollowersAccordianModel';
 import Card from '../../CommonComponent/Card/Card';
 import instagramFollowersCardModel from '../../Model/Card/instagramFollowersCardModel';
+import FAQ from '../../Compoents/FAQ/FAQ';
 
 const InstagramFollowers = () => {
 
@@ -20,6 +21,7 @@ const InstagramFollowers = () => {
             <Packages cards={instagramFollowersPackagescard} />
             <ImageContentBlock block={instagramFollowersImageContentBlock} />
             <Card card={instagramFollowersCardModel}/>
+          <FAQ/>
             <Accordian accordian={{ accordianModelLeft, accordianModelRight }} />
         </>
     )

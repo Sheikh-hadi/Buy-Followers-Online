@@ -1,8 +1,8 @@
 const instagramFollowersPricingModel =
 {
-    title: "Buy Instagram Fllowers Australia Real, Active,And Instant Delivery",
+    title: "Get Instant Fame with Buy Instagram Followers in Australia",
 
-    description: "Boost your Instagram presence with Buy Followers Australia, Australia’s leading Instagram marketing agency.Get your content viral in the Explore Feed with our 100 % natural, active, and non - drop followers who engage and stay with you forever.",
+    description: "Buy Instagram followers in Australia and boost your page engagement exponentially. As is the case with any other social media site, having a large following on Instagram is significant. With more than 1 billion active users, Instagram provides a wealth of options for anybody looking to express themselves on social media. It is expected that the current engagement rate will increase even further.",
     boxes: [
         {
             title: "Followers",

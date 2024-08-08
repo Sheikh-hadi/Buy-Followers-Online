@@ -29,12 +29,9 @@ const Pricing = (props) => {
           <h1 className="Heading"> {value.title} </h1>
           <p className="para">{value.description}</p>
           <div className="btn-1">
-          <button className="butn" onClick={buyNow}>
-  READ MORE
-</button>
-
-          
-
+            <button className="butn" onClick={buyNow}>
+              READ MORE
+            </button>
           </div>
         </div>
         <div className="col-lg-6">
@@ -46,7 +43,7 @@ const Pricing = (props) => {
                 onClick={() => selectBox(box)}
               >
                 <h6>{box.Number}</h6>
-                <p> {box.title} </p>
+                <p>{box.title}</p>
               </div>
             ))}
             <div className="output-container">

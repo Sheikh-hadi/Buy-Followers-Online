@@ -5,8 +5,12 @@ const instagramFollowersCardModel = [
         title: "Instant credibility",
         description: "More followers make it easier to get noticed. Buying Instagram followers boosts your profile's reputation, making your account look famous.",
         style: {
+            
             background: {
                 backgroundColor: '#e3f8ec',
+                borderColor: '#28fde6',
+                borderWidth: '2px', 
+                borderStyle: 'solid', 
             },
             heading1: {
                 fontSize: "50px",
@@ -37,6 +41,9 @@ const instagramFollowersCardModel = [
         style: {
             background: {
                 backgroundColor: '#cdf9fe',
+                borderColor: '#4ced3c ',
+                borderWidth: '2px', 
+                borderStyle: 'solid', 
             },
             heading1: {
                 fontSize: "50px",
@@ -67,6 +74,9 @@ const instagramFollowersCardModel = [
         style: {
             background: {
                 backgroundColor: '#e3f8ec',
+                borderColor: '#28fde6',
+                borderWidth: '2px', 
+                borderStyle: 'solid', 
             },
             heading1: {
                 fontSize: "50px",
@@ -97,7 +107,11 @@ const instagramFollowersCardModel = [
         style: {
             background: {
                 backgroundColor: '#cdf9fe',
+                borderColor: '#4ced3c ',
+                borderWidth: '2px', 
+                borderStyle: 'solid', 
             },
+            
             heading1: {
                 fontSize: "50px",
                 color: "#48ac8c",

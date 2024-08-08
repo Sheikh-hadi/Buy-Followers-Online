@@ -34,7 +34,7 @@ const instagramFollowersPackagescards = [
         id: 2,
         icon: "fas fa-mail-bulk icon",
         title: "Enter Your Details",
-        description:" Once you've entered your details, proceed to payment via PayPal or your card. Expect your delivery within minutes!",
+        description:"After clicking 'Buy Now', you'll be asked to provide necessary details such as your Instagram Username, Email, and Phone number for contact purposes.",
         style: {
             background: {
                 backgroundColor: '#e3f8ec',
@@ -76,13 +76,13 @@ const instagramFollowersPackagescards = [
             },
             heading2: {
                 fontSize: "20px",
-                margin: "0",
                 color: "#449099",
+                margin: "0px",
             },
             description: {
-                fontSize: "15px",
                 margin: "10px 0",
                 color: "#48ac8c",
+                fontSize: "15px",
             },
             icon: {
                 fontSize: "30px",

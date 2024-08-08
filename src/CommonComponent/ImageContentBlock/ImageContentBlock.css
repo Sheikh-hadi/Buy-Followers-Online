@@ -1,9 +1,8 @@
-.container{
+.container {
     align-items: center;
-   
 }
 
-
+/* Existing styles */
 .heading {
     line-height: 1.2em !important;
     font-weight: 800 !important;
@@ -15,11 +14,33 @@
     margin-bottom: 30px;
 }
 
-.para{
+.para {
     font-size: 17px !important;
-        color: #5e6d64 !important;
-        line-height: 1.6em !important;
-        font-weight: 400 !important;
-        font-style: normal !important;
-        font-family: "DM Sans", Sans-serif !important;
+    color: #5e6d64 !important;
+    line-height: 1.6em !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    font-family: "DM Sans", Sans-serif !important;
+}
+
+/* Responsive styles for screens smaller than 768px */
+@media (max-width: 767px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .col-4, .col-8 {
+        width: 100%;
+    }
+
+    .col-4 img {
+        margin: 0 auto;
+        display: block;
+        height: auto;
+    }
+
+    .heading, .para {
+        text-align: center;
+        padding: 15px 15px;
+    }
 }

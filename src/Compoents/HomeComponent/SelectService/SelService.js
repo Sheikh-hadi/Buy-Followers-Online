@@ -13,28 +13,28 @@ const SelService = () => {
       key: 1,
       title: `Buy ${changeTitle} Followers`,
       description: descriptionListCard,
-      price: 1.99,
+      price: '$1.99',
       link: `https://buyfollowersaustralia.com/buy-${changeTitle}-followers/`
     },
     {
       key: 2,
       title: `Buy ${changeTitle} Auto Likes`,
       description: descriptionListCard,
-      price: 1.99,
+      price: '$1.99',
       link: `https://buyfollowersaustralia.com/buy-${changeTitle}-followers/`
     },
     {
       key: 3,
       title: `Buy ${changeTitle} Likes`,
       description: descriptionListCard,
-      price: 1.99,
+      price:'$1.99',
       link: `https://buyfollowersaustralia.com/buy-${changeTitle}-followers/`
     },
     {
       key: 4,
       title: `Buy ${changeTitle} Views`,
       description: descriptionListCard,
-      price: 1.99,
+      price: '$1.99',
       link: `https://buyfollowersaustralia.com/buy-${changeTitle}-followers/`
     },
   ];
@@ -82,7 +82,8 @@ const SelService = () => {
                 <h6 className="card-price">{card.price}</h6>
                 <ul className="list-unstyled">
                   {card.description.map((listItem, index) => (
-                    <li className='' key={index}><i className="fas fa-check-circle"></i> {listItem}</li>
+                   <li className='' key={index}><i className="fa fa-check-circle" style={{ fontSize: '1rem',color:'#f60640;' }}></i> {listItem}</li>
+
                   ))}
                 </ul>
                 <button onClick={() => handleClick(card.link)} className="btn btn-primary buy-now-btn">Buy Now</button>

@@ -9,8 +9,9 @@
 }
 
 .feature-number {
-  font-size: 40px;
-  color: #b30b0b;
+  font-size: 50px;
+  font-weight: 600;
+  color: #f60640;;
   margin-right: 10px;
 }
 

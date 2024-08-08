@@ -2,7 +2,7 @@
   background-color: #f60640;
   border-radius: 30px;
   padding: 50px;
-  width: 78%;
+  width: 93%;
 }
 
 .icon-box {
@@ -11,6 +11,8 @@
 
 .icon-box i {
   font-size: 40px;
+  color: beige;
+  margin-bottom: 27px;
 }
 
 .bloc {
@@ -18,5 +20,37 @@
 }
 
 .icon-box p {
-  font-size: 16px;
+  font-size: 19px;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 767px) {
+  .icon-container {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .icon-box i {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  .icon-box p {
+    font-size: 16px;
+  }
+
+  /* Adjust columns for smaller screens */
+  .col-12 {
+    width: 100%;
+   
+  }
+
+  .col-sm-6 {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+
+  .col-md-3 {
+    width: 50%;
+  }
 }
