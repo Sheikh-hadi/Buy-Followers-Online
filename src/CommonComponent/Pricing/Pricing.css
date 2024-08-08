@@ -10,6 +10,7 @@
   border: 2px solid #c2bcbc;
 }
 .Heading {
+  /* text-align: center; */
   margin-top: 50px;
   padding: 35px;
   font-family: "Raleway", Sans-serif;
@@ -19,7 +20,7 @@
   text-transform: capitalize;
   line-height: 1.1em;
 }
-.para {
+.para1 {
   margin-top: -50px;
   padding-top: 30px;
   padding-bottom: 15px;
@@ -139,16 +140,22 @@
   text-align: center;
 }
 
+
 @media (max-width: 768px) {
   .inner-box {
     width: calc(50% - 20px);
   }
+  .container{
+    margin-top: -90px;
+  
+  }
+
+ 
 }
 
 @media (max-width: 480px) {
   .inner-box {
-    width: calc(33% - fit-content);
-    height: fit-content;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (max-width: 768px) {
