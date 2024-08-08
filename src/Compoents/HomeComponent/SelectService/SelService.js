@@ -56,7 +56,7 @@ const SelService = () => {
       <div className="row selectservice-main">
         <div className="col-sm-12 col-lg-12">
           <h1>Select Services</h1>
-          <p>Select Your Required Service & Enjoy</p>
+          <p className='serv'>Select Your Required Service & Enjoy</p>
         </div>
         <div className="button-services">
           <button 
