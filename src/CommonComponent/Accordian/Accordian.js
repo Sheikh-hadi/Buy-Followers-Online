@@ -18,8 +18,8 @@ const Accordian = (props) => {
     };
 
     return (
-        <div className='container'>
-            {/* <div className='mt-4 main'> */}
+        <div className='container '>
+            <div className=' main'>
             <Row gutter={50}>
                 <Col xs={24} md={12}>
                     <Space direction="vertical" style={{ width: '100%' }}>
@@ -63,7 +63,7 @@ const Accordian = (props) => {
                 </Col>
             </Row>
 
-            {/* </div> */}
+            </div>
         </div>
     );
 }
