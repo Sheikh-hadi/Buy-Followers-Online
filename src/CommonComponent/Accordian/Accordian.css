@@ -1,19 +1,16 @@
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
 }
 
 /* Main wrapper for the accordions */
 .main {
     margin-top: 1.5rem;
-    padding: 0 20px;
 }
 
 /* Styling for full-width collapse elements */
 .full-width-collapse {
-    width: 100%;
-    padding-right: 100px;
+    width: 45vw;
     font-family: "Fira Sans", Sans-serif;
     font-size: 15px;
     font-weight: 500;
@@ -21,7 +18,6 @@
     margin-bottom: 10px; /* Adds space between the accordions */
     border: 3px solid #ddd; /* Border around each accordion */
     border-radius: 4px; /* Rounded corners for the border */
-    /* overflow: hidden; */
 }
 .full-width-collapse p{
     color: #333;
@@ -34,30 +30,35 @@
 .open-panel-header .ant-collapse-header {
     color: red !important;
 }
-
-/* Adjust margins for smaller screens */
 @media screen and (max-width: 786px) {
     .full-width-collapse {
         width: 100%;
     }
 }
 
+/* Adjust margins for smaller screens */
+/* @media screen and (max-width: 786px) {
+    .full-width-collapse {
+        width: 100%;
+    }
+} */
+
 /* Adjust padding for larger screens */
-@media screen and (min-width: 786px) {
+/* @media screen and (min-width: 786px) {
     .main {
         padding: 0 60px;
     }
-}
+} */
 
 /* Panel header styling */
-.ant-collapse-header {
+/* .ant-collapse-header {
     background: #f7f7f7;
-    padding: 10px 16px; /* Adjust padding for header */
-    border-bottom: 1px solid #ddd; /* Bottom border for header */
-}
+    padding: 10px 16px; 
+    border-bottom: 1px solid #ddd; 
+} */
 
 /* Panel content styling */
-.ant-collapse-content-box {
-    padding: 10px 16px; /* Adjust padding for content */
-    background: white; /* White background for content */
-}
+/* .ant-collapse-content-box {
+    padding: 10px 16px; 
+    background: white; 
+} */

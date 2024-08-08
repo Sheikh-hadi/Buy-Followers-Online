@@ -2,11 +2,21 @@ import React, { useState } from 'react';
 import './SelService.css';
 
 const SelService = () => {
-  const [handleColor, SetHandleColor] = useState(false);
-
-  const changeTitle = handleColor ? "TikTok" : "Instagram";
+  const [handleColor, setHandleColor] = useState(true);
+  console.log(handleColor);
+  const changeTitle = handleColor ? "Instagram" : "TikTok";
 
   const descriptionListCard = ["Instant Delivery", "Real & Active Followers", "24/7 Customer Support", "No Password Required"];
+
+  let instagramColor = {
+    background: "red",
+    text: "white",
+  };
+
+  let tiktokColor = {
+    background: "grey",
+    text: "black",
+  };
 
   const cardFollowersData = [
     {
@@ -27,7 +37,7 @@ const SelService = () => {
       key: 3,
       title: `Buy ${changeTitle} Likes`,
       description: descriptionListCard,
-      price:'$1.99',
+      price: '$1.99',
       link: `https://buyfollowersaustralia.com/buy-${changeTitle}-followers/`
     },
     {
@@ -40,11 +50,11 @@ const SelService = () => {
   ];
 
   const handleInstagramColor = () => {
-    SetHandleColor(false);
+    setHandleColor(true);
   };
 
-  const handletiktokColor = () => {
-    SetHandleColor(true);
+  const handleTiktokColor = () => {
+    setHandleColor(false);
   };
 
   const handleClick = (link) => {
@@ -59,31 +69,49 @@ const SelService = () => {
           <p className='serv'>Select Your Required Service & Enjoy</p>
         </div>
         <div className="button-services">
-          <button 
-            className={`btn-ig ${!handleColor ? 'active' : ''}`} 
+          <button
+            style={{
+              color: handleColor ? instagramColor.text : tiktokColor.text,
+              backgroundColor: handleColor ? instagramColor.background : tiktokColor.background
+            }}
+            className={`btn-ig ${!handleColor ? 'active' : ''}`}
             onClick={handleInstagramColor}
           >
-            <i className="fab fa-instagram"></i>&nbsp;&nbsp;Instagram
+            <i className="fab fa-instagram" style={{
+              color: handleColor ? instagramColor.text : tiktokColor.text,
+            }}></i>&nbsp;&nbsp;Instagram
           </button>
-          <button 
-            className={`btn-tk ${handleColor ? 'active' : ''}`} 
-            onClick={handletiktokColor}
+          <button
+            style={{
+              color: handleColor ? tiktokColor.text : instagramColor.text,
+              backgroundColor: handleColor ? tiktokColor.background : instagramColor.background
+            }}
+            className={`btn-tk ${handleColor ? 'active' : ''}`}
+            onClick={handleTiktokColor}
           >
-            <i className="fab fa-tiktok"></i>&nbsp;&nbsp;Tiktok
+            <i className="fab fa-tiktok" style={{
+              color: handleColor ? tiktokColor.text : instagramColor.text,
+            }}></i>&nbsp;&nbsp;Tiktok
           </button>
         </div>
       </div>
-      <div className="container mt-5">
-        <div className="row justify-content-center p-1">
+      <div className='container ' style={{ border: "2px solid black" }}>
+        <div className="row ">
           {cardFollowersData.map((card, index) => (
-            <div key={index} className="col-lg-3 col-md-6 card">
-              <div className="card-body">
-                <h5 className="card-title">{card.title}</h5>
-                <h6 className="card-price">{card.price}</h6>
+            <div key={index} className="col-lg-3 col-md-6 card"  >
+              <div className="card-body" style={{ border: "2px solid black" }}>
+                <h5
+                  className="card-title"
+                  style={{ color: "#f60640" }}
+                >
+                  {card.title}
+                </h5>
+                <h6 className="card-price" >{card.price}</h6>
                 <ul className="list-unstyled">
                   {card.description.map((listItem, index) => (
-                   <li className='' key={index}><i className="fa fa-check-circle" style={{ fontSize: '1rem',color:'#f60640;' }}></i> {listItem}</li>
-
+                    <li key={index}>
+                      <i className="fa fa-check-circle" style={{ fontSize: '1rem', color: '#f60640;' }}></i> {listItem}
+                    </li>
                   ))}
                 </ul>
                 <button onClick={() => handleClick(card.link)} className="btn btn-primary buy-now-btn">Buy Now</button>
