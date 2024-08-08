@@ -1,0 +1,23 @@
+.fq-section {
+    background-color: #f9f9f9; /* Light background color */
+    text-align: center; /* Center aligns the text 
+    */
+    margin-top: 100px;
+}
+
+.fq-section h2 {
+    font-size: 32px; /* Font size for the heading */
+    color: #172b43; /* Dark color for the heading */
+    font-weight: 800; /* Bold font weight for the heading */
+    margin-bottom: 10px; /* Spacing below the heading */
+}
+
+.fq-section p {
+    text-align: center;
+    
+    color: #5e6d64; /* Slightly lighter color for the paragraph */
+    font-family: "DM Sans", Sans-serif;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.6em;
+}
