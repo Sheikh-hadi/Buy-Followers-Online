@@ -23,7 +23,8 @@
   padding: 0px 40px;
 }
 
-.btn-ig, .btn-tk {
+.btn-ig,
+.btn-tk {
   margin: 0 8px;
   display: block;
   font-size: 15px;
@@ -31,10 +32,11 @@
   border-radius: 50px;
   transition: background-color 0.3s ease;
   border: none;
-  width: 520px; /* Adjust the width as needed */
+  width: 520px;
+  /* Adjust the width as needed */
 }
 
-.btn-ig {
+/* .btn-ig {
   background-color: #e63946;
   color: #fff;
 }
@@ -61,49 +63,44 @@
 
 .btn-ig:hover {
   background-color: #cf1c31;
-}
+} */
 
 /* Make icons white */
-.btn-ig i, .btn-tk i {
+/* .btn-ig i,
+.btn-tk i {
   color: white;
 }
+
 .btn-tk i {
   color: rgb(11, 10, 10);
-}
+} */
 
 /* Card CSS */
 .card {
-  border: 1px solid #ddd;
   border-radius: 10px;
   background-color: #f5f6f700;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  /* padding: 50px; */
-  justify-content: center;
   height: auto;
-}
-.card-body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
-  padding: 0px;
+  padding: 20px;
+  /* Added padding for spacing inside the card */
 }
+
+/* .card-body {
+  flex-grow: 1;
+} */
 
 .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* .card-title {
-  font-size: 12px;
-  color: #f60640;
-  
-} */
 .card-title {
-  font-size:17px;
-  font-weight:700;
-  color:#f60640; /* Pink color */
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f60640;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -111,19 +108,15 @@
 
 .buy-now-btn {
   background-color: #f60640;
-  width: 100px;
+  width: 100%;
   border: none;
-}
-
-
-.card-price {
-  font-size: 1.5rem;
-  color: #333;
-  margin: 0.5rem 0;
+  padding: 10px 0;
+  font-size: 1rem;
 }
 
 ul {
   padding-left: 0;
+  margin-bottom: 20px;
 }
 
 li {
@@ -135,37 +128,67 @@ li {
 i {
   color: #f60640;
   margin-right: 0.5rem;
-  font-size: 1.2rem; /* Smaller icon size */
+  font-size: 1rem;
 }
 
 .container {
-  display: flex;
-  justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 50px; /* Added padding for left and right space */
+  /* padding: 20px; */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-price {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 15px;
+  }
+
+  .buy-now-btn {
+    font-size: 0.9rem;
+    padding: 8px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-title {
+    font-size: 0.9rem;
+  }
+
+  .buy-now-btn {
+    font-size: 0.85rem;
+    padding: 7px 0;
+  }
 }
 
 .row {
-  justify-content: center;
+ flex-wrap: none;
 }
-
 .buy-now-btn:hover {
   background-color: #f60640;
 }
 
 /* Custom CSS to ensure cards are centered on large screens */
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
   .row.justify-content-center.p-1 {
     display: flex;
     justify-content: center;
     gap: 10px;
     flex-wrap: nowrap;
   }
-}
+} */
 
-@media (max-width: 991.98px) {
+/* @media (max-width: 991.98px) {
   .row.justify-content-center.p-1 {
     flex-wrap: wrap;
   }
-}
+} */

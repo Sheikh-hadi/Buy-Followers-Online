@@ -23,9 +23,9 @@ const IconCards = () => {
 
   return (
     <div className="container my-5">
-      <div className="row icon-container justify-content-center">
+      <div className="row icon-container">
         {iconCardArray.map((iconCard, index) => (
-          <div key={index} className="col-12 col-sm-6 col-md-3 text-center mb-4">
+          <div key={index} className="col-6 col-md-3 text-center mb-4">
             <div className="icon-box">
               <i className={iconCard.icon}></i>
               <p className="bloc">{iconCard.text}</p>

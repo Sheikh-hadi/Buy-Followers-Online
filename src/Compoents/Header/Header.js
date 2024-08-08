@@ -20,13 +20,13 @@ const Header = () => {
 
   return (
     <>
-      <div className="pt-2 pb-2 row align-items-center nav-bar nav-bar-list" >
+      <div className= "pt-2 pb-2 row align-items-center justify-content-center nav-bar nav-bar-list"  >
         <div className="col-xs-2 col-sm-6 col-md-4 col-lg-4" >
           <img src="logo.png" alt="Logo" />
         </div>
-        <div className="col-xs-6 col-sm-6 col-md-6 col-lg-" >
+        <div className="col-xs-6 col-sm-6 col-md-6 col-lg-"  >
           <div className="row">
-            <div className="col-sm-1 col-md-2 col-lg-2 ">
+            <div className="col-sm-1 col-md-2 col-lg-2 " >
               <a href="/" className="text-decoration-none nav-bar-a">Home</a>
             </div>
             <div className="col-sm-1 col-md-2 col-lg-2 ">
@@ -53,14 +53,14 @@ const Header = () => {
               <a href="/blog" className="text-decoration-none nav-bar-a">Blog</a>
             </div>
             <div className="col-sm-1 col-md-2 col-lg-2 ">
-              <a href="/contactUs" className="text-decoration-none nav-bar-a">Contact Us</a>
+              <a href="/contactUs" className="text-decoration-none nav-bar-a">Contact</a>
             </div>
           </div>
         </div>
       </div>
 
       <div className=" nav-bar mobile-view" >
-        <div className="col-xs-2 col-sm-6 col-md-4 col-lg-4" >
+        <div className="col-xs-2 col-sm-6 col-md-4 col-lg-6" >
           <img src="logo.png" alt="Logo" />
         </div>
         <div className=" flex col-xs-6 col-sm-6 col-md-6 col-lg-6 " >

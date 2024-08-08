@@ -71,7 +71,7 @@ const homePackagescards = [
             },
             heading1: {
                 fontSize: "70px",
-                color: "#48ac8c",
+                color: "#449099",
                 margin: "0px",
             },
             heading2: {
@@ -82,11 +82,11 @@ const homePackagescards = [
             description: {
                 fontSize: "15px",
                 margin: "10 0",
-                color: "#48ac8c",
+                color: "#449099",
             },
             icon: {
                 fontSize: "30px",
-                color: "plum",
+                color: "#449099",
             }
         }
     },

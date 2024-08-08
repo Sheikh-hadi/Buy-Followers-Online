@@ -70,23 +70,23 @@ const instagramFollowersPackagescards = [
                 backgroundColor: '#cdf9fe',
             },
             heading1: {
-                fontSize: "50px",
-                color: "#48ac8c",
+                fontSize: "70px",
+                color: "#449099",
                 margin: "0px",
             },
             heading2: {
                 fontSize: "20px",
+                margin: "0",
                 color: "#449099",
-                margin: "0px",
             },
             description: {
-                margin: "10px 0",
-                color: "#48ac8c",
                 fontSize: "15px",
+                margin: "10 0",
+                color: "#449099",
             },
             icon: {
                 fontSize: "30px",
-                color: "plum",
+                color: "#449099",
             }
         }
     },

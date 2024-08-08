@@ -4,13 +4,13 @@ const Packages = (props) => {
   let cardList = props.cards;
   console.log("cardList: ", cardList);
   return (
-    <div className="container mt-4">
-      <div className="row">
+    <div className="container mt-4" >
+      <div className="row" >
         {cardList.map((list, index) => {
           return (
-            <div className="col-lg-4 col-md-6 mb-4" >
-              <div className="card package-card" style={list.style.background}>
-                <div className="card-body">
+            <div className="col-lg-4 col-md-6 "  >
+              <div className="card package-card p-0" style={list.style.background} >
+                <div className="card-body" >
                   <div className="d-flex justify-content-between align-items-center mb-3">
                     <i className={list.icon} style={list.style.icon}></i>
                     <h1 className="number" style={list.style.heading1}><b>{list.id}</b></h1>
