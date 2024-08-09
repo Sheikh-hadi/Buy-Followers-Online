@@ -23,10 +23,10 @@ const Pricing = (props) => {
   };
 
   return (
-    <div className="container ">
+    <div className="container">
       <div className="row">
         <div className="col-lg-6">
-          <h1 className="Heading"> {value.title} </h1>
+          <h1 className="Heading">{value.title}</h1>
           <p className="para1">{value.description}</p>
           <div className="btn-1">
             <button className="butn" onClick={buyNow}>
@@ -42,8 +42,8 @@ const Pricing = (props) => {
                 className={`inner-box ${selectedBox === box ? "selected" : ""}`}
                 onClick={() => selectBox(box)}
               >
-                <h6>{box.Number}</h6>
-                <p>{box.title}</p>
+                <h6 className="box-num">{box.Number}</h6>
+                <p className="box-para">{box.title}</p>
               </div>
             ))}
             <div className="output-container">

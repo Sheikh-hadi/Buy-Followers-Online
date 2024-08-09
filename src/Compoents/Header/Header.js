@@ -26,12 +26,12 @@ const Header = () => {
           <a href="/" className="nav-link">Home</a>
           <a href="/about" className="nav-link">About Us</a>
           <div className="dropdown">
-            <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Instagram</a>
+            <a href="/" className="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Instagram</a>
             <ul className="dropdown-menu">
               <li><a className="dropdown-item" href="/instagramfollowers">Instagram Followers</a></li>
               <li><a className="dropdown-item" href="/instagramlikes">Instagram Likes</a></li>
               <li><a className="dropdown-item" href="/buyinstagramautolikes">Buy Instagram Auto Likes</a></li>
-              <li><a className="dropdown-item" href="/buyinstagramautoreels">Buy Instagram Auto Reels</a></li>
+              <li><a className="dropdown-item" href="/buyinstagramautoreels">Buy Instagram Reels Likes</a></li>
             </ul>
           </div>
           <div className="dropdown">

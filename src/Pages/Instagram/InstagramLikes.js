@@ -8,12 +8,18 @@ import instagramLikesPackagesCards from '../../Model/PackagesCardsModel/instagra
 import instagramLikesImageContentBlock from '../../Model/ImageContentBlockModel/instagramLikesImageContentBlock';
 import { accordianModelLeft, accordianModelRight } from '../../Model/AccordianModel/instagramLikesAccordianModel';
 import instagramLikesPricingModel from '../../Model/PricingModel/Instagram/instagramLikesPricingModel';
+import Comp1 from '../../Compoents/InstaFollowerReaminngComp/Comp1/Comp1';
+import PickUp from '../../Compoents/InstaFollowerReaminngComp/PickUp/PickUp';
+import FAQ from '../../Compoents/FAQ/FAQ';
 const InstagramLikes = () => {
     return (
         <>
             <Pricing price={instagramLikesPricingModel} />
+          <Comp1/>
             <Packages cards={instagramLikesPackagesCards} />
+            <PickUp/>
             <ImageContentBlock block={instagramLikesImageContentBlock} />
+           <FAQ/>
             <Accordian accordian={{ accordianModelLeft, accordianModelRight }} />
         </>
     )
