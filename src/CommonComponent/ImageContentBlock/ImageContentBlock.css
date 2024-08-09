@@ -1,0 +1,69 @@
+.container {
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    /* Center items vertically in the row */
+}
+
+.col-4.img {
+    display: flex;
+    justify-content: center;
+    /* Center image horizontally in the column */
+}
+
+.col-8 {
+    /* If you want to center align text within this column */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center content vertically */
+}
+/* Existing styles */
+.heading {
+    line-height: 1.2em !important;
+    font-weight: 800 !important;
+    font-style: normal !important;
+    font-family: "Fira Sans", Sans-serif !important;
+    color: #172b43 !important;
+    font-size: 20px;
+}
+
+.para {
+    font-size: 17px !important;
+    color: #5e6d64 !important;
+    line-height: 1.6em !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    font-family: "DM Sans", Sans-serif !important;
+}
+
+/* Responsive styles for screens smaller than 768px */
+@media (max-width: 767px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .col-4, .col-8 {
+        width: 100%;
+    }
+
+    .col-4 img {
+        display: block;
+        align-items: center;
+        margin: 0 auto;
+        display: block;
+        height: auto;
+    }
+
+    .heading, .para {
+        text-align: center;
+    }
+    .img{
+        display: block;
+        align-items: center;
+    }
+}
