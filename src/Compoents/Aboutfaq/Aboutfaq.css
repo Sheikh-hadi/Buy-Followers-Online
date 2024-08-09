@@ -1,0 +1,22 @@
+.fq-section {
+    text-align: center; 
+   
+    margin-bottom: 30px;
+}
+
+.fq-section h2 {
+    font-size: 32px; 
+    color: #172b43; 
+    font-weight: 800; 
+    margin-bottom: 10px; 
+}
+
+.fq-section p {
+    text-align: center;
+    
+    color: #5e6d64; 
+    font-family: "DM Sans", Sans-serif;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.6em;
+}
