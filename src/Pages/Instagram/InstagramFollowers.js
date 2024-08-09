@@ -19,7 +19,6 @@ const InstagramFollowers = () => {
 
     return (
         <>
-
             <Pricing price={instagramFollowersPricingModel} />
             <Comp1/>
             <Packages cards={instagramFollowersPackagescard} />

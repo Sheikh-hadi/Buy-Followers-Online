@@ -1,7 +1,7 @@
 import React from 'react';
 const FourPackages = (props) => {
     let cardList = props.card;
-    console.log("cardList: ", cardList);
+    // console.log("cardList: ", cardList);
     return (
             <div className="row" style={{paddingLeft:"20px", paddingRight:"20px"}}>
                 {cardList.map((list, index) => {

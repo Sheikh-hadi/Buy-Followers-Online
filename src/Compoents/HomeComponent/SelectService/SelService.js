@@ -1,19 +1,20 @@
-import tikimg from "../../../assets/images/tikImg.png"
 import React, { useState } from 'react';
 import './SelService.css';
 import { Col, Row, Button, List, Avatar, Card, Typography } from "antd";
+import tikimg from "../../../assets/images/tikImg.png"
 const { Title } = Typography;
 const SelService = () => {
 
   const [handleColor, setHandleColor] = useState(true);
-  console.log(handleColor);
+  // console.log(handleColor);
   const changeTitle = handleColor ? "Instagram" : "TikTok";
 
   const descriptionListCard = ["Instant Delivery", "Real & Active Followers", "24/7 Customer Support", "No Password Required"];
 
   let instagramColor = {
-    background: "red",
+    background: "#f51636",
     text: "white",
+    border:"2px solid #f51636"
   };
 
   let tiktokColor = {
@@ -21,6 +22,7 @@ const SelService = () => {
     text: "black",
   };
 
+  console.log("tik: ",tikimg)
   const cardFollowersData = [
     {
       key: 1,
@@ -35,7 +37,6 @@ const SelService = () => {
       title: `Buy ${changeTitle} Auto Likes`,
       description: descriptionListCard,
       price: '$1.99',
-      avaster: tikimg,
       link: `https://buyfollowersaustralia.com/buy-${changeTitle}-followers/`
     },
     {
@@ -43,7 +44,6 @@ const SelService = () => {
       title: `Buy ${changeTitle} Likes`,
       description: descriptionListCard,
       price: '$1.99',
-      avaster: tikimg,
       link: `https://buyfollowersaustralia.com/buy-${changeTitle}-followers/`
     },
     {
@@ -51,7 +51,6 @@ const SelService = () => {
       title: `Buy ${changeTitle} Views`,
       description: descriptionListCard,
       price: '$1.99',
-      avaster: tikimg,
       link: `https://buyfollowersaustralia.com/buy-${changeTitle}-followers/`
     },
   ];
@@ -79,7 +78,8 @@ const SelService = () => {
           <button
             style={{
               color: handleColor ? instagramColor.text : tiktokColor.text,
-              backgroundColor: handleColor ? instagramColor.background : tiktokColor.background
+              backgroundColor: handleColor ? instagramColor.background : tiktokColor.background,
+              border: instagramColor.border
             }}
             className={`btn-ig ${!handleColor ? 'active' : ''}`}
             onClick={handleInstagramColor}
@@ -91,7 +91,9 @@ const SelService = () => {
           <button
             style={{
               color: handleColor ? tiktokColor.text : instagramColor.text,
-              backgroundColor: handleColor ? tiktokColor.background : instagramColor.background
+              backgroundColor: handleColor ? tiktokColor.background : instagramColor.background,
+              border: instagramColor.border
+
             }}
             className={`btn-tk ${handleColor ? 'active' : ''}`}
             onClick={handleTiktokColor}
@@ -108,7 +110,7 @@ const SelService = () => {
             <Card className='card_inner_style'
               hoverable={true}
               size='small'
-              title={<span style={{ color: 'red' }}>{card.title}</span>}
+              title={<span style={{ color: '#f51636' }}>{card.title}</span>}
             >
               <Title className='ListPrice'>
                 {card.price}
@@ -130,7 +132,7 @@ const SelService = () => {
               <Button
                 onClick={() => handleClick(card.link)}
                 size='middle'
-                style={{ background: "red", borderRadius: "none", color: "whitesmoke", border: "none", marginTop:"10px" }}
+                style={{ background: "#f51636", borderRadius: "none", color: "whitesmoke", border: "none", marginTop:"10px" }}
               >
                 Buy Now
               </Button>

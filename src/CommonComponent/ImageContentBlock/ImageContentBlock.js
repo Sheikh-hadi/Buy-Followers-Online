@@ -3,7 +3,7 @@ import './ImageContentBlock.css';
 
 const ImageContentBlock = (props) => {
     const blockList = props.block;
-    console.log("cardList: ", blockList);
+    // console.log("cardList: ", blockList);
 
     return (
         <div className="container mt-4 mb-4">
