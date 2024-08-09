@@ -55,17 +55,36 @@ const Header = () => {
           <MenuUnfoldOutlined style={{ fontSize: '40px' }} onClick={showModal} />
           <Modal
             className="custom-modal"
-            placement="right"
             open={isModalOpen}
             onOk={handleOk}
             onCancel={handleCancel}
             footer={null}
+            width={350}
+            style={{
+              float: "right",
+              marginTop: "-100px",
+            }}
           >
-            <ul style={{ padding: 0, margin: 0, listStyleType: 'none' }}>
+            <ul style={{ display: "flex", flexDirection: "column", padding: 0, margin: 0, listStyleType: 'none' }}>
               <li className='model-list'><a href='/'>Home</a></li>
               <li className='model-list'><a href='/aboutus'>About Us</a></li>
-              <li className='model-list'><a href='/'>Instagram</a></li>
-              <li className='model-list'><a href='/'>TikTok</a></li>
+              <li className='model-list dropdown'>
+                <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Instagram</a>
+                <ul className="dropdown-menu" style={{ padding: 0, margin: 0, listStyleType: 'none' }}>
+                  <li><a className="dropdown-item" href="/instagramfollowers">Instagram Followers</a></li>
+                  <li><a className="dropdown-item" href="/instagramlikes">Instagram Likes</a></li>
+                  <li><a className="dropdown-item" href="/buyinstagramautolikes">Buy Instagram Auto Likes</a></li>
+                  <li><a className="dropdown-item" href="/buyinstagramautoreels">Buy Instagram Auto Reels</a></li>
+                </ul>
+              </li>
+              <li className='model-list dropdown'>
+                <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">TikTok</a>
+                <ul className="dropdown-menu" style={{ padding: 0, margin: 0, listStyleType: 'none' }}>
+                  <li><a className="dropdown-item" href="/buytiktokfollowers">Buy TikTok Followers</a></li>
+                  <li><a className="dropdown-item" href="/buytiktoklikes">Buy TikTok Likes</a></li>
+                  <li><a className="dropdown-item" href="/buytiktokviews">Buy TikTok Views</a></li>
+                </ul>
+              </li>
               <li className='model-list'><a href='/Blog'>Blog</a></li>
               <li className='model-list'><a href='/'>Contact Us</a></li>
             </ul>

@@ -1,10 +1,4 @@
 import { Col, Row, Typography } from "antd";
-import {
-  UserOutlined,
-  KeyOutlined,
-  CreditCardOutlined,
-  CustomerServiceOutlined,
-} from '@ant-design/icons';
 import './IconCard.css'
 const { Title } = Typography;
 

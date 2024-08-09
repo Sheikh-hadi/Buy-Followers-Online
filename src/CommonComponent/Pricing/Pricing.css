@@ -124,14 +124,11 @@
     width: calc(33.33% - 20px); /* 3 boxes in a row for medium screens */
 
   }
-
-  .box-num{
-    font-size: 15px;
-    font-weight: 700;
+  .container {
+    margin-top: -90px;
   }
-  .box-para{
-    font-size: 15px;
-    
+  .butn {
+    margin-bottom: 15px; 
   }
   .main-box{
     padding: 10px;

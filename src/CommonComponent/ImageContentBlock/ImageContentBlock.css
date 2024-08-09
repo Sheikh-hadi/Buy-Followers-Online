@@ -1,8 +1,27 @@
 .container {
     align-items: center;
-    padding: 20px;
+    padding: 0px 20px;
 }
 
+.row {
+    display: flex;
+    align-items: center;
+    /* Center items vertically in the row */
+}
+
+.col-4.img {
+    display: flex;
+    justify-content: center;
+    /* Center image horizontally in the column */
+}
+
+.col-8 {
+    /* If you want to center align text within this column */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center content vertically */
+}
 /* Existing styles */
 .heading {
     line-height: 1.2em !important;
@@ -11,8 +30,6 @@
     font-family: "Fira Sans", Sans-serif !important;
     color: #172b43 !important;
     font-size: 20px;
-    padding: 0px 35px;
-    margin-bottom: 30px;
 }
 
 .para {
@@ -44,7 +61,6 @@
 
     .heading, .para {
         text-align: center;
-        padding: 15px 15px;
     }
     .img{
         display: block;
