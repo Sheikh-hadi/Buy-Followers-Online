@@ -41,13 +41,11 @@ const instagramFollowersCardModel = [
         style: {
             background: {
                 backgroundColor: '#cdf9fe',
-                borderColor: '#4ced3c ',
-                borderWidth: '2px', 
-                borderStyle: 'solid', 
+                borderColor: '#cdf9fe',
             },
             heading1: {
-                fontSize: "50px",
-                color: "#48ac8c",
+                fontSize: "70px",
+                color: "#449099",
                 margin: "0px",
             },
             heading2: {
@@ -58,11 +56,11 @@ const instagramFollowersCardModel = [
             description: {
                 fontSize: "15px",
                 margin: "10 0",
-                color: "#48ac8c",
+                color: "#449099",
             },
             icon: {
                 fontSize: "30px",
-                color: "plum",
+                color: "#449099",
             }
         }
     },
@@ -107,14 +105,10 @@ const instagramFollowersCardModel = [
         style: {
             background: {
                 backgroundColor: '#cdf9fe',
-                borderColor: '#4ced3c ',
-                borderWidth: '2px', 
-                borderStyle: 'solid', 
             },
-            
             heading1: {
-                fontSize: "50px",
-                color: "#48ac8c",
+                fontSize: "70px",
+                color: "#449099",
                 margin: "0px",
             },
             heading2: {
@@ -125,11 +119,11 @@ const instagramFollowersCardModel = [
             description: {
                 fontSize: "15px",
                 margin: "10 0",
-                color: "#48ac8c",
+                color: "#449099",
             },
             icon: {
                 fontSize: "30px",
-                color: "plum",
+                color: "#449099",
             }
         }
     },

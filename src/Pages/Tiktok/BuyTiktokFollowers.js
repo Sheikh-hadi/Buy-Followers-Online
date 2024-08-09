@@ -7,14 +7,14 @@ import buytiktokfollowersImageContentBlock from '../../Model/ImageContentBlockMo
 import buytiktokfollowersImageContentBlock2 from '../../Model/ImageContentBlockModel/buytiktokfollowersImageContentBlock2'
 import { accordianModelLeft, accordianModelRight } from '../../Model/AccordianModel/buyTiktokFollowersAccordianModel'
 import buyTiktokFollowersPricingModel from '../../Model/PricingModel/Tiktok/buyTiktokFollowersPricingModel'
-import Card from '../../CommonComponent/Card/Card'
 import buyTiktokFollowersCardModel from '../../Model/Card/Tiktok/buyTiktokFollowersCardModel'
+import FourPackages from '../../CommonComponent/FourPackages/FourPackages'
 const BuyTiktokFollowers = () => {
   return (
     <>
       <Pricing price={buyTiktokFollowersPricingModel} />
       <ImageContentBlock block={buytiktokfollowersImageContentBlock} />
-      <Card card={buyTiktokFollowersCardModel} />
+      <FourPackages card={buyTiktokFollowersCardModel} />
       <ImageContentBlock block={buytiktokfollowersImageContentBlock2} />
       <Accordian accordian={{ accordianModelLeft, accordianModelRight }} />
     </>

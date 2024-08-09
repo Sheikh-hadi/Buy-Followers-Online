@@ -8,9 +8,9 @@ import instagramFollowersPricingModel from '../../Model/PricingModel/Instagram/i
 import instagramFollowersPackagescard from '../../Model/PackagesCardsModel/InstagramFollowersPackagesCards';
 import instagramFollowersImageContentBlock from '../../Model/ImageContentBlockModel/instagramFollowersImageContentBlock';
 import { accordianModelLeft, accordianModelRight } from '../../Model/AccordianModel/instagramFollowersAccordianModel';
-import Card from '../../CommonComponent/Card/Card';
 import instagramFollowersCardModel from '../../Model/Card/instagramFollowersCardModel';
 import FAQ from '../../Compoents/FAQ/FAQ';
+import FourPackages from '../../CommonComponent/FourPackages/FourPackages';
 
 const InstagramFollowers = () => {
 
@@ -20,7 +20,7 @@ const InstagramFollowers = () => {
             <Pricing price={instagramFollowersPricingModel} />
             <Packages cards={instagramFollowersPackagescard} />
             <ImageContentBlock block={instagramFollowersImageContentBlock} />
-            <Card card={instagramFollowersCardModel}/>
+            <FourPackages card={instagramFollowersCardModel}/>
           <FAQ/>
             <Accordian accordian={{ accordianModelLeft, accordianModelRight }} />
         </>
