@@ -1,7 +1,25 @@
 import React from 'react';
+import { Form, Input, Button, notification } from 'antd';
 import './ContactIntro.css';
+import ChatButton from '../../ChatWindow/ChatWindowButton'; // Import the ChatButton component
+
+const { TextArea } = Input;
 
 const ContactIntro = () => {
+  const [form] = Form.useForm();
+
+  const onFinish = (values) => {
+    console.log('Form values:', values);
+    notification.success({
+      message: 'Success',
+      description: 'Your message has been submitted successfully!',
+      placement: 'topRight',
+    });
+
+    // Optionally reset the form
+    form.resetFields();
+  };
+
   return (
     <div>
       <header className="contact-header">
@@ -29,34 +47,60 @@ const ContactIntro = () => {
             <div className="contact-form">
               <h3>Send Message</h3>
               <div className='row'>
-                <form>
-                  <div className="form-row">
-                    <div className="form-group">
-                      <input type="text" className="form-control" placeholder="Your Name" style={{ height: "50px" }} />
+                <Form
+                  form={form}
+                  onFinish={onFinish}
+                  layout="vertical"
+                  style={{ maxWidth: '600px', margin: 'auto' }}
+                >
+                  <Form.Item
+                    name="name"
+                    rules={[{ required: true, message: 'Please input your name!' }]}
+                  >
+                    <Input placeholder="Your Name" style={{ height: '50px' }} />
+                  </Form.Item>
+
+                  <div className='row'>
+                    <Form.Item
+                      name="email"
+                      className="col-xs-12 col-sm-12 col-lg-6"
+                      rules={[{ required: true, type: 'email', message: 'Please input a valid email!' }]}
+                    >
+                      <Input placeholder="Your Email" style={{ height: '50px' }} />
+                    </Form.Item>
+
+                    <Form.Item
+                      name="phone"
+                      className="col-xs-12 col-sm-12 col-lg-6"
+                      rules={[{ required: true, message: 'Please input your phone number!' }]}
+                    >
+                      <Input placeholder="Your Phone" style={{ height: '50px' }} />
+                    </Form.Item>
+                  </div>
+
+                  <Form.Item
+                    name="message"
+                    rules={[{ required: true, message: 'Please input your message!' }]}
+                  >
+                    <TextArea placeholder="How Can we Help You?" rows={4} />
+                  </Form.Item>
+
+                  <Form.Item>
+                    <div style={{ display: 'flex', justifyContent: 'center' }}>
+                      <Button type="primary" htmlType="submit" className="btn btn-danger">
+                        Submit Message
+                      </Button>
                     </div>
-                    <div className='row'>
-                      <div className="col-xs-12 col-sm-12 col-lg-6 form-group">
-                        <input type="email" className="form-control" placeholder="Your Email" style={{ height: "50px" }} />
-                      </div>
-                      <div className="col-xs-12 col-sm-12 col-lg-6 form-group">
-                        <input type="tel" className="form-control" placeholder="Your Phone" style={{ height: "50px" }} />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="form-group">
-                    <textarea className="form-control" placeholder="How Can we Help You?" rows="4"></textarea>
-                  </div>
-                  <div style={{display: "flex", justifyContent: "center"}}>
-                    <button type="submit" className="btn btn-danger">Submit Message</button>
-                  </div>
-                </form>
+                  </Form.Item>
+                </Form>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <ChatButton /> {/* Add the chat button here */}
     </div>
   );
-}
+};
 
 export default ContactIntro;
