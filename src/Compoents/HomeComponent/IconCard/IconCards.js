@@ -1,7 +1,14 @@
-import React from 'react';
-import './IconCards.css';
+import { Col, Row, Typography } from "antd";
+import {
+  UserOutlined,
+  KeyOutlined,
+  CreditCardOutlined,
+  CustomerServiceOutlined,
+} from '@ant-design/icons';
+import './IconCard.css'
+const { Title } = Typography;
 
-const IconCards = () => {
+const IconCard = () => {
   const iconCardArray = [
     {
       icon: "fas fa-users",
@@ -20,21 +27,53 @@ const IconCards = () => {
       text: "Secure Payment"
     },
   ];
-
   return (
-    <div className="container my-5">
-      <div className="row icon-container">
-        {iconCardArray.map((iconCard, index) => (
-          <div key={index} className="col-6 col-md-3 text-center mb-4">
-            <div className="icon-box">
-              <i className={iconCard.icon}></i>
-              <p className="bloc">{iconCard.text}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
+    <Row style={{ margin: "4vh 5vw" }} className="iconCard" gutter={16} justify="center" align="middle">
+      {iconCardArray.map((icon, index) => {
+        return (
+          <Col xs={12} sm={12} md={6} lg={6} style={{ textAlign: 'center' }}>
+            <i className={icon.icon} style={{
+              fontSize: "50px",
+              color: "white"
+            }}></i>
+            <Title style={{ color: "white" }} level={5}>{icon.text}</Title>
+          </Col>
+        )
+      })}
+      {/* <Col xs={12} sm={12} md={6} lg={6} style={{ textAlign: 'center' }}>
+        <UserOutlined style={{
+          padding: "10px",
+          fontSize: "50px",
+          color: "white"
+        }} />
+        <Title style={{ color: "white" }} level={5}>Active Users</Title>
+      </Col>
+      <Col xs={12} sm={12} md={6} lg={6} style={{ textAlign: 'center' }}>
+        <CustomerServiceOutlined style={{
+          padding: "10px",
+          fontSize: "50px",
+          color: "white"
+        }} />
+        <Title style={{ color: "white" }} level={5}>Live Support</Title>
+      </Col>
+      <Col xs={12} sm={12} md={6} lg={6} style={{ textAlign: 'center' }}>
+        <CreditCardOutlined style={{
+          padding: "10px",
+          fontSize: "50px",
+          color: "white"
+        }} />
+        <Title style={{ color: "white" }} level={5}>Safe and Secure</Title>
+      </Col>
+      <Col xs={12} sm={12} md={6} lg={6} style={{ textAlign: 'center' }}>
+        <KeyOutlined style={{
+          padding: "10px",
+          fontSize: "50px",
+          color: "white"
+        }} />
+        <Title style={{ color: "white" }} level={5}>Secure Payment</Title>
+      </Col> */}
+    </Row>
   );
 }
 
-export default IconCards;
+export default IconCard;

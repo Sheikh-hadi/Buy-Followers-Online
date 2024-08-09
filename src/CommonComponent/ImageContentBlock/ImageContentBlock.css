@@ -46,4 +46,8 @@
         text-align: center;
         padding: 15px 15px;
     }
+    .img{
+        display: block;
+        align-items: center;
+    }
 }

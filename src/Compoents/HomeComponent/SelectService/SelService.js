@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './SelService.css';
-
+import { Col, Row, Button, List, Avatar, Card, Typography } from "antd";
+const { Title } = Typography;
 const SelService = () => {
+
   const [handleColor, setHandleColor] = useState(true);
   console.log(handleColor);
   const changeTitle = handleColor ? "Instagram" : "TikTok";
@@ -24,7 +26,7 @@ const SelService = () => {
       title: `Buy ${changeTitle} Followers`,
       description: descriptionListCard,
       price: '$1.99',
-      link: `https://buyfollowersaustralia.com/buy-${changeTitle}-followers/`
+      link: `https://buyfollowersaustralia.com/buy-${changeTitle}-followers/`,
     },
     {
       key: 2,
@@ -95,32 +97,44 @@ const SelService = () => {
           </button>
         </div>
       </div>
-      <div className='container ' style={{ border: "2px solid black" }}>
-        <div className="row ">
-          {cardFollowersData.map((card, index) => (
-            <div key={index} className="col-lg-3 col-md-6 card"  >
-              <div className="card-body" style={{ border: "2px solid black" }}>
-                <h5
-                  className="card-title"
-                  style={{ color: "#f60640" }}
-                >
-                  {card.title}
-                </h5>
-                <h6 className="card-price" >{card.price}</h6>
-                <ul className="list-unstyled">
-                  {card.description.map((listItem, index) => (
-                    <li key={index}>
-                      <i className="fa fa-check-circle" style={{ fontSize: '1rem', color: '#f60640;' }}></i> {listItem}
-                    </li>
-                  ))}
-                </ul>
-                <button onClick={() => handleClick(card.link)} className="btn btn-primary buy-now-btn">Buy Now</button>
-              </div>
-            </div>
-          ))}
-        </div>
+      <Row justify="center" style={{ padding: "5vh 8vw" }} gutter={[30, 24]}>
+        {cardFollowersData.map((card, index) => (
+          <Col className='card_style' key={index} xs={20} sm={20} md={6} lg={6}>
+            <Card className='card_inner_style'
+              hoverable={true}
+              size='small'
+              title={<span style={{ color: 'red' }}>{card.title}</span>}
+            >
+              <Title className='ListPrice'>
+                {card.price}
+              </Title>
+              <List
+                bordered={false}
+                itemLayout="horizontal"
+                dataSource={card.description}
+                renderItem={item => (
+                  <List.Item style={{ padding: "3px", margin: "0", border: "none" }}>
+                    <List.Item.Meta
+                      avatar={<Avatar src={card.avatar} />}
+                      title={<span className='listColor' style={{ lineHeight: '1' }}>{item}</span>}
+                    />
+                  </List.Item>
+                )}
+              />
+
+              <Button
+                onClick={() => handleClick(card.link)}
+                size='middle'
+                style={{ background: "red", borderRadius: "none", color: "whitesmoke", border: "none", marginTop:"10px" }}
+              >
+                Buy Now
+              </Button>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+
       </div>
-    </div>
   );
 };
 

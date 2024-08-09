@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal } from 'antd';
+import { Col, Modal, Row } from 'antd';
 import { MenuUnfoldOutlined } from '@ant-design/icons';
 import './Header.css';
 
@@ -20,56 +20,48 @@ const Header = () => {
 
   return (
     <>
-      <div className= "pt-2 pb-2 row align-items-center justify-content-center nav-bar nav-bar-list"  >
-        <div className="col-xs-2 col-sm-6 col-md-4 col-lg-4" >
-          <img src="logo.png" alt="Logo" />
-        </div>
-        <div className="col-xs-6 col-sm-6 col-md-6 col-lg-"  >
-          <div className="row">
-            <div className="col-sm-1 col-md-2 col-lg-2 " >
-              <a href="/" className="text-decoration-none nav-bar-a">Home</a>
-            </div>
-            <div className="col-sm-1 col-md-2 col-lg-2 ">
-              <a href="/about" className="text-decoration-none nav-bar-a">About Us</a>
-            </div>
-            <div className="col-sm-1 col-md-2 col-lg-2 dropdown ">
-              <a href="#" className="text-decoration-none nav-bar-a dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Instagram</a>
-              <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="/instagramfollowers">InstagramFollowers</a></li>
-                <li><a className="dropdown-item" href="/instagramlikes">Instagram Likes</a></li>
-                <li><a className="dropdown-item" href="/buyinstagramautolikes">Buy Instagram Auto Likes</a></li>
-                <li><a className="dropdown-item" href="/buyinstagramautoreels">Buy Instagram Auto Reels</a></li>
-              </ul>
-            </div>
-            <div className="col-sm-1 col-md-2 col-lg-2 dropdown ">
-              <a href="#" className="text-decoration-none nav-bar-a dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">TikTok</a>
-              <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="/buytiktokfollowers">Buy TikTok Followers</a></li>
-                <li><a className="dropdown-item" href="/buytiktoklikes">Buy TikTok Likes</a></li>
-                <li><a className="dropdown-item" href="/buytiktokviews">Buy TikTok Views</a></li>
-              </ul>
-            </div>
-            <div className="col-sm-1 col-md-2 col-lg-2 ">
-              <a href="/blog" className="text-decoration-none nav-bar-a">Blog</a>
-            </div>
-            <div className="col-sm-1 col-md-2 col-lg-2 ">
-              <a href="/contactUs" className="text-decoration-none nav-bar-a">Contact</a>
-            </div>
+      <div className="navbar">
+        <img src="logo.png" alt="Logo" className="logo" />
+        <div className="nav-links">
+          <a href="/" className="nav-link">Home</a>
+          <a href="/about" className="nav-link">About Us</a>
+          <div className="dropdown">
+            <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Instagram</a>
+            <ul className="dropdown-menu">
+              <li><a className="dropdown-item" href="/instagramfollowers">Instagram Followers</a></li>
+              <li><a className="dropdown-item" href="/instagramlikes">Instagram Likes</a></li>
+              <li><a className="dropdown-item" href="/buyinstagramautolikes">Buy Instagram Auto Likes</a></li>
+              <li><a className="dropdown-item" href="/buyinstagramautoreels">Buy Instagram Auto Reels</a></li>
+            </ul>
           </div>
+          <div className="dropdown">
+            <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">TikTok</a>
+            <ul className="dropdown-menu">
+              <li><a className="dropdown-item" href="/buytiktokfollowers">Buy TikTok Followers</a></li>
+              <li><a className="dropdown-item" href="/buytiktoklikes">Buy TikTok Likes</a></li>
+              <li><a className="dropdown-item" href="/buytiktokviews">Buy TikTok Views</a></li>
+            </ul>
+          </div>
+          <a href="/blog" className="nav-link">Blog</a>
+          <a href="/contactUs" className="nav-link">Contact</a>
         </div>
       </div>
 
-      <div className=" nav-bar mobile-view" >
-        <div className="col-xs-2 col-sm-6 col-md-4 col-lg-6" >
-          <img src="logo.png" alt="Logo" />
-        </div>
-        <div className=" flex col-xs-6 col-sm-6 col-md-6 col-lg-6 " >
-          <MenuUnfoldOutlined style={{
-            fontSize: "40px"
-          }}
-            onClick={showModal} />
-          <Modal placement="bottom" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-            <ul>
+      <Row className="mobile-nav">
+        <Col xs={12} style={{ display: 'flex', justifyContent: 'center' }}>
+          <img src="logo.png" alt="Logo" style={{ maxWidth: '100%', height: 'auto' }} />
+        </Col>
+        <Col xs={12} style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
+          <MenuUnfoldOutlined style={{ fontSize: '40px' }} onClick={showModal} />
+          <Modal
+            className="custom-modal"
+            placement="right"
+            open={isModalOpen}
+            onOk={handleOk}
+            onCancel={handleCancel}
+            footer={null}
+          >
+            <ul style={{ padding: 0, margin: 0, listStyleType: 'none' }}>
               <li className='model-list'><a href='/'>Home</a></li>
               <li className='model-list'><a href='/aboutus'>About Us</a></li>
               <li className='model-list'><a href='/'>Instagram</a></li>
@@ -78,10 +70,9 @@ const Header = () => {
               <li className='model-list'><a href='/'>Contact Us</a></li>
             </ul>
           </Modal>
-        </div>
-      </div>
+        </Col>
+      </Row>
     </>
-
   );
 };
 
