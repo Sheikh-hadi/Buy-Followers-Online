@@ -3,7 +3,7 @@ import './AboutUsIntro.css';
 import about from '../../assets/images/aboutus.jpg'
 export default function AboutUsIntro() {
   return (
-    <div className="container">
+    <div className="container mt-1">
       <div className="row align-items-center intro">
         <div className="col-xs-12 col-sm-12  col-md-12  col-lg-6  intro_img">
           <img src={about} alt="" className="img-fluid rounded" />
