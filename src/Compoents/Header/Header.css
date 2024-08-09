@@ -1,42 +1,97 @@
+/* Header.css */
 
-.nav-bar-a {
-    color: #535455b0;
-    font-size: 18px !important;
-    font-weight: 900 !important;
-    line-height: 1.3em !important;
-    font-family: "Fira Sans", "Sans-serif" !important;
+/* For larger screens: show full navigation bar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 100px;
+    background-color: #fff;
 }
 
-.nav-bar-a:hover {
-    color: red;
+.nav-links {
+    display: flex;
+    align-items: center;
 }
 
-.model-list {
-    list-style: none;
-}
-
-.model-list a {
+.nav-link {
+    margin: 0 10px;
     text-decoration: none;
-    color: #1a202c;
-    font-size: 18px !important;
-    font-weight: 900 !important;
-    line-height: 1.3em !important;
-    font-family: "Fira Sans", "Sans-serif" !important;
+    color: #000;
 }
-.mobile-view {
+
+.dropdown-menu {
     display: none;
-    /* Hide by default */
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ddd;
 }
 
-@media (max-width: 756px) {
-    .nav-bar-list {
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* For smaller screens: hide full navigation bar and show icon */
+.mobile-nav {
+    display: none;
+}
+
+.custom-modal .ant-modal {
+    width: 200px;
+    height: 500px;
+    top: 0;
+    right: 0;
+    position: fixed;
+}
+
+.custom-modal .ant-modal-content {
+    height: 100%;
+}
+
+.custom-modal .ant-modal-body {
+    overflow-y: auto;
+}
+
+/* Header.css */
+
+/* Custom modal styling */
+.custom-modal .ant-modal {
+    width: 50px;
+    /* Set width */
+    height: 200px;
+    /* Set height */
+    top: 0;
+    /* Align top of modal with the top of the screen */
+    right: 0;
+    /* Align right side of modal with the right side of the screen */
+    position: fixed;
+    /* Fixed position for modal */
+    margin: 0;
+    /* Remove default margin */
+    border: 2px solid black;
+}
+
+.custom-modal .ant-modal-content {
+    height: 100%;
+    /* Make content fill the height of the modal */
+}
+
+.custom-modal .ant-modal-body {
+    overflow-y: auto;
+    /* Add scroll if content overflows */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
         display: none;
-        /* Hide navbar buttons on mobile */
     }
 
-    .mobile-view {
-        display: block;
+    .mobile-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: #fff;
     }
-   
 }
-

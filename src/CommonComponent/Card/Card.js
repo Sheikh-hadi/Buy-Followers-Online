@@ -5,12 +5,12 @@ const Card = (props) => {
     console.log("value: ", value);
     return (
         <div className='container' >
-            <div className='row g3' >
+            <div className='row ' >
 {
     value.map((card,index)=>{
         return(
            
-                <div className="col-lg-3 col-md-6 " >
+                <div className="col-lg-3 col-md-6 mb-4" >
                     <div className="card package-card" style={card.style.background}>
                         <div className="card-body">
                             <div >
