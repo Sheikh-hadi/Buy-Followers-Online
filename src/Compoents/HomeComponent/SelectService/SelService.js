@@ -1,3 +1,4 @@
+import tikimg from "../../../assets/images/tikImg.png"
 import React, { useState } from 'react';
 import './SelService.css';
 import { Col, Row, Button, List, Avatar, Card, Typography } from "antd";
@@ -26,6 +27,7 @@ const SelService = () => {
       title: `Buy ${changeTitle} Followers`,
       description: descriptionListCard,
       price: '$1.99',
+      avaster:tikimg,
       link: `https://buyfollowersaustralia.com/buy-${changeTitle}-followers/`,
     },
     {
@@ -33,6 +35,7 @@ const SelService = () => {
       title: `Buy ${changeTitle} Auto Likes`,
       description: descriptionListCard,
       price: '$1.99',
+      avaster: tikimg,
       link: `https://buyfollowersaustralia.com/buy-${changeTitle}-followers/`
     },
     {
@@ -40,6 +43,7 @@ const SelService = () => {
       title: `Buy ${changeTitle} Likes`,
       description: descriptionListCard,
       price: '$1.99',
+      avaster: tikimg,
       link: `https://buyfollowersaustralia.com/buy-${changeTitle}-followers/`
     },
     {
@@ -47,6 +51,7 @@ const SelService = () => {
       title: `Buy ${changeTitle} Views`,
       description: descriptionListCard,
       price: '$1.99',
+      avaster: tikimg,
       link: `https://buyfollowersaustralia.com/buy-${changeTitle}-followers/`
     },
   ];

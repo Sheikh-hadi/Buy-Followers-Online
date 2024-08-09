@@ -28,8 +28,8 @@ const Blogs = () => {
       <div className="blog-header">
         <h1 className='bl'>BLOG</h1>
       </div>
-      <div className="container">
-        <div className="row">
+      <div className="container blogMainBlock" >
+        <div className="row ">
           {blogData.map((blog) => (
             <div className="col-md-4 mb-4" key={blog.id}>
               <div className="card">

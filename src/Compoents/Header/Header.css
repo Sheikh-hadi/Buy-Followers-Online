@@ -12,12 +12,22 @@
 .nav-links {
     display: flex;
     align-items: center;
+    text-decoration: none;
 }
 
 .nav-link {
     margin: 0 10px;
     text-decoration: none;
     color: #000;
+    text-decoration: none;
+    font-family: "DM Sans", Sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.3em;
+}
+
+.nav-link:hover {
+    color: red
 }
 
 .dropdown-menu {
