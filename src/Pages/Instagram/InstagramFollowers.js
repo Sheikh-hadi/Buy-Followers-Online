@@ -11,6 +11,9 @@ import { accordianModelLeft, accordianModelRight } from '../../Model/AccordianMo
 import instagramFollowersCardModel from '../../Model/Card/instagramFollowersCardModel';
 import FAQ from '../../Compoents/FAQ/FAQ';
 import FourPackages from '../../CommonComponent/FourPackages/FourPackages';
+import Comp1 from '../../Compoents/InstaFollowerReaminngComp/Comp1/Comp1';
+import PickUp from '../../Compoents/InstaFollowerReaminngComp/PickUp/PickUp';
+import UpdatedBenefits from '../../Compoents/InstaFollowerReaminngComp/UpdatedBenefits/UpdatedBenefits';
 
 const InstagramFollowers = () => {
 
@@ -18,9 +21,13 @@ const InstagramFollowers = () => {
         <>
 
             <Pricing price={instagramFollowersPricingModel} />
+            <Comp1/>
             <Packages cards={instagramFollowersPackagescard} />
             <ImageContentBlock block={instagramFollowersImageContentBlock} />
-            <FourPackages card={instagramFollowersCardModel}/>
+            <PickUp/>
+            <ImageContentBlock block={instagramFollowersImageContentBlock} />
+            <UpdatedBenefits/>  <FourPackages card={instagramFollowersCardModel}/>
+          
           <FAQ/>
             <Accordian accordian={{ accordianModelLeft, accordianModelRight }} />
         </>
