@@ -1,7 +1,6 @@
 import React from 'react';
 import { Form, Input, Button, notification } from 'antd';
 import './ContactIntro.css';
-import ChatButton from '../../ChatWindow/ChatWindowButton'; // Import the ChatButton component
 
 const { TextArea } = Input;
 
@@ -98,7 +97,6 @@ const ContactIntro = () => {
           </div>
         </div>
       </section>
-      <ChatButton /> {/* Add the chat button here */}
     </div>
   );
 };

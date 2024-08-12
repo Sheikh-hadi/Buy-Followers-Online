@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Packages = (props) => {
-  let cardList = props.cards;
-  // console.log("cardList: ", cardList);
+const Packages = ({cards}) => {
+
+  // console.log("cardList: ", cards);
   return (
-    <div className="container mt-4">
+     <div className="container mt-4">
       <div className="row no-gutters">
-        {cardList.map((list, index) => {
+        {cards.map((list, index) => {
           return (
             <div className="col" key={index}>
               <div className="card package-card p-0" style={list.style.background}>
@@ -25,7 +25,7 @@ const Packages = (props) => {
           )
         })}
       </div>
-    </div>
+    </div> 
   );
 }
 

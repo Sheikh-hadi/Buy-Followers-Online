@@ -22,7 +22,7 @@ const SelService = () => {
     text: "black",
   };
 
-  console.log("tik: ",tikimg)
+  // console.log("tik: ",tikimg)
   const cardFollowersData = [
     {
       key: 1,
