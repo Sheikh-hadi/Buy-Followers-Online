@@ -1,0 +1,110 @@
+body {
+    background-color: #fff;
+    background: linear-gradient(to right, #fefafa, #f5f6fb);
+}
+
+.login-container {
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container-box {
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+    display: flex;
+}
+
+.form-container {
+    padding: 2rem;
+}
+
+.sign-in h1, .toggle-right h1 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.social-icons {
+    margin: 20px 0;
+    text-align: center;
+    text-decoration: none;
+}
+
+.social-icons a {
+    border: 1px solid #ccc;
+    border-radius: 25%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+}
+
+.sign-in span, .forgot-password {
+    display: block;
+    margin-top: 15px;
+    color: #6c757d;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-signin, .btn-signup {
+    background-color: #ea1426;
+    color: #fff;
+    font-size: 12px;
+   
+    padding: 10px 45px;
+    border: 1px solid white;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    width: 100%;
+}
+.btn-signin:hover{
+    background-color: #ec3235;
+}
+.btn-signup:hover{
+    background-color: #ec3235;
+}
+
+.toggle-right {
+    background: linear-gradient(to right, #ec3235, #ea1426);
+    color: #fff;
+    /* flex-direction: column; */
+    /* text-align: center; */
+    border-radius:120px 0px 0px 120px; 
+    /* position: relative; */
+    padding: 8rem 7rem;
+}
+
+.toggle-right h1 {
+    color: #fff;
+}
+
+.toggle-right p {
+    color: #fbf8f8;
+}
+
+@media (max-width: 768px) {
+    .container-box {
+      flex-direction: column;
+    }
+
+    .toggle-right {
+      padding: 2rem;
+      border-radius: 0;
+    }
+
+    .sign-in, .toggle-right {
+      width: 100%;
+    }
+}

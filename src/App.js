@@ -17,6 +17,7 @@ import BuyTiktokViews from "./Pages/Tiktok/BuyTiktokViews";
 
 import Blog from "./Pages/Blog";
 import ContactUs from "./Pages/ContactUs";
+import Login from "./Compoents/LogIn/Login";
 
 
 const App = () => {
@@ -28,7 +29,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
 
           <Route path="/about" element={<AboutUs />} />
-
+          <Route path="/Login" element={<Login/>} />
           <Route path="/instagramfollowers" element={<InstagramFollowers />} />
           <Route path="/instagramlikes" element={<InstagramLikes />} />
           <Route path="/buyinstagramautolikes" element={<BuyInstagramAutoLikes />} />
