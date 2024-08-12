@@ -5,7 +5,7 @@ body {
 
 .login-container {
     min-height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #fff;
 }
 
 .container-box {
@@ -17,22 +17,55 @@ body {
     max-width: 100%;
     min-height: 480px;
     display: flex;
+    position: relative;
 }
 
 .form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+    width: 50%;
     padding: 2rem;
+    background-color: #fff;
 }
 
-.sign-in h1, .toggle-right h1 {
-    text-align: center;
-    font-size: 24px;
-    font-weight: 700;
+.sign-in {
+    left: 0;
+    z-index: 2;
+}
+
+.sign-up {
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+}
+
+.active.sign-in {
+    transform: translateX(100%);
+}
+
+.active.sign-up {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+
+@keyframes move {
+    0%, 49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100% {
+        opacity: 1;
+        z-index: 5;
+    }
 }
 
 .social-icons {
     margin: 20px 0;
     text-align: center;
-    text-decoration: none;
 }
 
 .social-icons a {
@@ -47,19 +80,79 @@ body {
     text-decoration: none;
 }
 
-.sign-in span, .forgot-password {
-    display: block;
-    margin-top: 15px;
-    color: #6c757d;
+.toggle-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+}
+
+.active .toggle-container {
+    transform: translateX(-100%);
+    border-radius: 0 150px 150px 0;
+}
+
+.toggle {
+    background-color: #ec3235;
+    height: 100%;
+    background: linear-gradient(to right, #ec3235, #ea1426);
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.active .toggle {
+    transform: translateX(50%);
+}
+
+.toggle-panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
     text-align: center;
-    text-decoration: none;
+    top: 0;
+    
+    transition: all 0.6s ease-in-out;
+}
+.Persnal-detail{
+    color: white;
+}
+
+.toggle-left {
+    transform: translateX(-200%);
+}
+
+.active .toggle-left {
+    transform: translateX(0);
+}
+
+.toggle-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.active .toggle-right {
+    transform: translateX(200%);
 }
 
 .btn-signin, .btn-signup {
     background-color: #ea1426;
     color: #fff;
     font-size: 12px;
-   
     padding: 10px 45px;
     border: 1px solid white;
     border-radius: 8px;
@@ -67,44 +160,7 @@ body {
     letter-spacing: 0.5px;
     text-transform: uppercase;
     margin-top: 20px;
-    width: 100%;
 }
-.btn-signin:hover{
+.btn-signin:hover, .btn-signup:hover {
     background-color: #ec3235;
-}
-.btn-signup:hover{
-    background-color: #ec3235;
-}
-
-.toggle-right {
-    background: linear-gradient(to right, #ec3235, #ea1426);
-    color: #fff;
-    /* flex-direction: column; */
-    /* text-align: center; */
-    border-radius:120px 0px 0px 120px; 
-    /* position: relative; */
-    padding: 8rem 7rem;
-}
-
-.toggle-right h1 {
-    color: #fff;
-}
-
-.toggle-right p {
-    color: #fbf8f8;
-}
-
-@media (max-width: 768px) {
-    .container-box {
-      flex-direction: column;
-    }
-
-    .toggle-right {
-      padding: 2rem;
-      border-radius: 0;
-    }
-
-    .sign-in, .toggle-right {
-      width: 100%;
-    }
 }
