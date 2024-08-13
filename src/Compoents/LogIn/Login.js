@@ -5,10 +5,7 @@ import "./Login.css";
 const Login = () => {
   const [active, setActive] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
-
-  const handleCheckboxChange = (event) => {
-    setIsChecked(event.target.checked);
-  };
+  console.log("isChecked", isChecked)
   const [showPassword, setShowPassword] = useState(false);
   const [shoPassword, setShoPassword] = useState(false);
   const [signUpData, setSignUpData] = useState({
@@ -23,6 +20,10 @@ const Login = () => {
     email: "",
     password: "",
   });
+
+  const handleCheckboxChange = (event) => {
+    setIsChecked(event.target.checked);
+  };
 
   const handleSignUpChange = (e) => {
     const { name, value } = e.target;
@@ -137,26 +138,32 @@ const Login = () => {
               </button>
             </div>
             <div className="form-check">
-            <input 
-              type="checkbox" 
-              className="form-check-input" 
-              id="termsCheck" 
-              checked={isChecked} 
-              onChange={handleCheckboxChange} 
-            />
-            <label className="form-check-label" htmlFor="termsCheck">
-              I accept the <a href="#!">Terms and Conditions</a>
-            </label>
-          </div>
-       
-            <Button type="submit" className="btn-signup" disabled={!isChecked}>
-              Sign Up
-            </Button>
+                <input 
+                    type="checkbox" 
+                    className="form-check-input" 
+                    id="termsCheck" 
+                    checked={isChecked} 
+                    onChange={handleCheckboxChange} 
+                />
+                <label className="form-check-label" htmlFor="termsCheck">
+                    I accept the <a href="#!">Terms and Conditions</a>
+                </label>
+            </div>
+        
+            <button 
+                type="submit" 
+                className={`btn-signup ${!isChecked ? 'btn-disabled' : ''}`} 
+                disabled={!isChecked}
+                style={isChecked ? {color:"white", background:"red",border:"2px solid white"} : { color:"red", background:"white", border:"2px solid red"} }
+            >
+                Sign Up
+            </button>
           </Form>
         </Col>
 
         <Col md={6} className="form-container sign-in">
           <Form onSubmit={handleSignInSubmit}>
+          
             <h1 className="login-heading">Sign In</h1>
             <div className="social-icons ">
               <a href="/" className="icon">
