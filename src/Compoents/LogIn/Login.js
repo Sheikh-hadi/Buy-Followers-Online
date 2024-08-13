@@ -4,12 +4,50 @@ import './Login.css';
 
 const Login = () => {
   const [active, setActive] = useState(false);
+  const [signUpData, setSignUpData] = useState({
+    name: '',
+    email: '',
+    password: ''
+  });
+
+  const [signInData, setSignInData] = useState({
+    email: '',
+    password: ''
+  });
+
+  const handleSignUpChange = (e) => {
+    const { name, value } = e.target;
+    setSignUpData({
+      ...signUpData,
+      [name]: value
+    });
+  };
+
+  const handleSignInChange = (e) => {
+    const { name, value } = e.target;
+    setSignInData({
+      ...signInData,
+      [name]: value
+    });
+  };
+
+  const handleSignUpSubmit = (e) => {
+    e.preventDefault();
+    console.log('Sign Up Data:', signUpData);
+    // API call or further processing can be done here
+  };
+
+  const handleSignInSubmit = (e) => {
+    e.preventDefault();
+    console.log('Sign In Data:', signInData);
+    // API call or further processing can be done here
+  };
 
   return (
     <Container fluid className={`d-flex justify-content-center align-items-center login-container ${active ? 'active' : ''}`}>
       <Row className="container-box">
-        <Col md={6} className={`form-container sign-up ${active ? 'active' : ''}`}>
-          <Form>
+        <Col md={6} className="form-container sign-up">
+          <Form onSubmit={handleSignUpSubmit}>
             <h1>Create Account</h1>
             <div className="social-icons">
               <a href="/" className="icon"><i className="fab fa-google-plus-g"></i></a>
@@ -18,14 +56,33 @@ const Login = () => {
               <a href="/" className="icon"><i className="fab fa-linkedin-in"></i></a>
             </div>
             <span>or use your email for registration</span>
-            <Form.Control type="text" placeholder="Name" />
-            <Form.Control type="email" placeholder="Email" />
-            <Form.Control type="password" placeholder="Password" />
-            <Button className="mt-3 btn-signup">Sign Up</Button>
+            <Form.Control 
+              type="text" 
+              placeholder="Name" 
+              name="name" 
+              value={signUpData.name} 
+              onChange={handleSignUpChange} 
+            />
+            <Form.Control 
+              type="email" 
+              placeholder="Email" 
+              name="email" 
+              value={signUpData.email} 
+              onChange={handleSignUpChange} 
+            />
+            <Form.Control 
+              type="password" 
+              placeholder="Password" 
+              name="password" 
+              value={signUpData.password} 
+              onChange={handleSignUpChange} 
+            />
+            <Button type="submit" className="mt-3 btn-signup">Sign Up</Button>
           </Form>
         </Col>
-        <Col md={6} className={`form-container sign-in ${active ? '' : 'active'}`}>
-          <Form>
+  
+        <Col md={6} className="form-container sign-in">
+          <Form onSubmit={handleSignInSubmit}>
             <h1>Sign In</h1>
             <div className="social-icons">
               <a href="/" className="icon"><i className="fab fa-google-plus-g"></i></a>
@@ -33,23 +90,36 @@ const Login = () => {
               <a href="/" className="icon"><i className="fab fa-github"></i></a>
               <a href="/" className="icon"><i className="fab fa-linkedin-in"></i></a>
             </div>
-            <span>or use your email for registration</span>
-            <Form.Control type="email" placeholder="Email" />
-            <Form.Control type="password" placeholder="Password" />
-            <a href="/" className="forgot-password">Forget Your Password?</a>
-            <Button className="mt-3 btn-signin">Sign In</Button>
+            <span>or use your email to sign in</span>
+            <Form.Control 
+              type="email" 
+              placeholder="Email" 
+              name="email" 
+              value={signInData.email} 
+              onChange={handleSignInChange} 
+            />
+            <Form.Control 
+              type="password" 
+              placeholder="Password" 
+              name="password" 
+              value={signInData.password} 
+              onChange={handleSignInChange} 
+            />
+            <a href="/" className="forgot-password">Forgot Your Password?</a>
+            <Button type="submit" className="mt-3 btn-signin">Sign In</Button>
           </Form>
         </Col>
+
         <Col md={6} className="toggle-container">
           <div className={`toggle ${active ? 'active' : ''}`}>
             <div className="toggle-panel toggle-left">
               <h1>Welcome Back!</h1>
-              <p className='Persnal-detail'>Enter your personal details to use all of the site features.</p>
+              <p className='personal-detail'>Enter your personal details to use all of the site features.</p>
               <Button onClick={() => setActive(false)} className="btn-signin">Sign In</Button>
             </div>
             <div className="toggle-panel toggle-right">
               <h1>Hello, Friend!</h1>
-              <p className='Persnal-detail'>Register with your personal details to use all of the site features.</p>
+              <p className='personal-detail'>Register with your personal details to use all of the site features.</p>
               <Button onClick={() => setActive(true)} className="btn-signup">Sign Up</Button>
             </div>
           </div>

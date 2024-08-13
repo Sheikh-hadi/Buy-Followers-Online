@@ -33,22 +33,24 @@ body {
 .sign-in {
     left: 0;
     z-index: 2;
+    transform: translateX(0); /* Default position for sign-in */
 }
 
 .sign-up {
-    left: 0;
+    right: 0;
     opacity: 0;
     z-index: 1;
+    transform: translateX(100%); /* Move sign-up out of view */
 }
 
-.active.sign-in {
-    transform: translateX(100%);
+.active .sign-in {
+    transform: translateX(-100%); /* Move sign-in out of view when active */
 }
 
-.active.sign-up {
-    transform: translateX(100%);
+.active .sign-up {
     opacity: 1;
-    z-index: 5;
+    z-index: 2;
+    transform: translateX(0); /* Bring sign-up into view when active */
     animation: move 0.6s;
 }
 
@@ -125,10 +127,10 @@ body {
     padding: 0 30px;
     text-align: center;
     top: 0;
-    
     transition: all 0.6s ease-in-out;
 }
-.Persnal-detail{
+
+.personal-detail {
     color: white;
 }
 
@@ -161,6 +163,7 @@ body {
     text-transform: uppercase;
     margin-top: 20px;
 }
+
 .btn-signin:hover, .btn-signup:hover {
     background-color: #ec3235;
 }
