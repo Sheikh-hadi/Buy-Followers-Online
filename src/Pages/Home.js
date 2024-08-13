@@ -7,6 +7,7 @@ import Process from "../Compoents/HomeComponent/Process/Process";
 import Packages from "../CommonComponent/Package/Packages";
 import KeyFeatures from "../Compoents/HomeComponent/KeyFeature/KeyFeatures";
 import Features from "../Compoents/HomeComponent/Feature/Features";
+import { Skeleton } from "antd";
 
 const Home = () => {
   const [home, setHome] = useState(null);
@@ -32,7 +33,7 @@ const Home = () => {
   // console.log("home in home page: ", home);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <Skeleton/>;
   }
 
   if (error) {

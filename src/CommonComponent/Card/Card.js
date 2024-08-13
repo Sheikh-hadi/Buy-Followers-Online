@@ -2,7 +2,7 @@ import React from 'react'
 
 const Card = (props) => {
     let value = props.card;
-    console.log("value: ", value);
+    // console.log("value: ", value);
     return (
         <div className='container' >
             <div className='row ' >
