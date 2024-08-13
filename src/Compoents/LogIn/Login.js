@@ -6,11 +6,7 @@ const Login = () => {
   const [active, setActive] = useState(false);
   const [signUpData, setSignUpData] = useState({
     name: '',
-<<<<<<< Updated upstream
     UserName:'',
-=======
-    username:'',
->>>>>>> Stashed changes
     email: '',
     password: '',
     confirmPassword:""
