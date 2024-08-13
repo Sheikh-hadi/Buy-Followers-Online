@@ -26,23 +26,35 @@ body {
     height: 100%;
     transition: all 0.6s ease-in-out;
     width: 50%;
-    padding: 2rem;
+    padding: 1rem;
     background-color: #fff;
 }
+
 
 .sign-in {
     left: 0;
     z-index: 2;
     transform: translateX(0); /* Default position for sign-in */
 }
-
+.login-heading{
+    text-align: center;
+    color: #ea1426;
+    font-weight: 700;
+}
+.create{
+    color: #ea1426;
+    font-weight: 700;
+}
 .sign-up {
     right: 0;
     opacity: 0;
     z-index: 1;
     transform: translateX(100%); /* Move sign-up out of view */
 }
-
+.forget{
+    text-decoration: none;
+    color: gray;
+}
 .active .sign-in {
     transform: translateX(-100%); /* Move sign-in out of view when active */
 }
@@ -66,16 +78,17 @@ body {
 }
 
 .social-icons {
-    margin: 20px 0;
+    /* margin-top: 0px; */
     text-align: center;
 }
 
 .social-icons a {
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     border-radius: 25%;
     display: inline-flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center;
+    margin-top: 8px; */
     margin: 0 5px;
     width: 40px;
     height: 40px;
@@ -155,6 +168,7 @@ body {
     background-color: #ea1426;
     color: #fff;
     font-size: 12px;
+    text-decoration: none;
     padding: 10px 45px;
     border: 1px solid white;
     border-radius: 8px;
@@ -165,5 +179,7 @@ body {
 }
 
 .btn-signin:hover, .btn-signup:hover {
-    background-color: #ec3235;
+    background-color: white; 
+  color: #dc3545; 
+  border: 1px solid #dc3545;
 }

@@ -6,13 +6,16 @@ const Login = () => {
   const [active, setActive] = useState(false);
   const [signUpData, setSignUpData] = useState({
     name: '',
+    UserName:'',
     email: '',
-    password: ''
+    password: '',
+    confirmPassword:""
   });
 
   const [signInData, setSignInData] = useState({
     email: '',
-    password: ''
+    password: '',
+   
   });
 
   const handleSignUpChange = (e) => {
@@ -48,19 +51,28 @@ const Login = () => {
       <Row className="container-box">
         <Col md={6} className="form-container sign-up">
           <Form onSubmit={handleSignUpSubmit}>
-            <h1>Create Account</h1>
+            <h1 className='create mb-3'>Create Account</h1>
+            
             <div className="social-icons">
               <a href="/" className="icon"><i className="fab fa-google-plus-g"></i></a>
               <a href="/" className="icon"><i className="fab fa-facebook-f"></i></a>
               <a href="/" className="icon"><i className="fab fa-github"></i></a>
               <a href="/" className="icon"><i className="fab fa-linkedin-in"></i></a>
             </div>
-            <span>or use your email for registration</span>
+            {/* <span>or use your email to sign in</span> */}
+         
             <Form.Control 
               type="text" 
-              placeholder="Name" 
+              placeholder="Full Name" 
               name="name" 
               value={signUpData.name} 
+              onChange={handleSignUpChange} 
+            />
+             <Form.Control 
+              type="text" 
+              placeholder="Username" 
+              name="UserName" 
+              value={signUpData.UserName} 
               onChange={handleSignUpChange} 
             />
             <Form.Control 
@@ -77,20 +89,27 @@ const Login = () => {
               value={signUpData.password} 
               onChange={handleSignUpChange} 
             />
-            <Button type="submit" className="mt-3 btn-signup">Sign Up</Button>
+              <Form.Control 
+              type="password" 
+              placeholder="Confirm Password" 
+              name="confirmPassword" 
+              value={signUpData.ConfirmPasswordPassword} 
+              onChange={handleSignUpChange} 
+            />
+            <Button type="submit" className="mt-1 btn-signup">Sign Up</Button>
           </Form>
         </Col>
   
         <Col md={6} className="form-container sign-in">
           <Form onSubmit={handleSignInSubmit}>
-            <h1>Sign In</h1>
-            <div className="social-icons">
+            <h1 className='login-heading'>Sign In</h1>
+            <div className="social-icons ">
               <a href="/" className="icon"><i className="fab fa-google-plus-g"></i></a>
               <a href="/" className="icon"><i className="fab fa-facebook-f"></i></a>
               <a href="/" className="icon"><i className="fab fa-github"></i></a>
               <a href="/" className="icon"><i className="fab fa-linkedin-in"></i></a>
             </div>
-            <span>or use your email to sign in</span>
+            {/* <span>or use your email to sign in</span> */}
             <Form.Control 
               type="email" 
               placeholder="Email" 
@@ -105,8 +124,11 @@ const Login = () => {
               value={signInData.password} 
               onChange={handleSignInChange} 
             />
-            <a href="/" className="forgot-password">Forgot Your Password?</a>
-            <Button type="submit" className="mt-3 btn-signin">Sign In</Button>
+           <div className="text-center mt-3"><br></br>
+  <a href="/" className=" forget d-block mb-3 ">Forgot Your Password?</a>
+  <button className="btn btn-danger">SIGN IN</button>
+</div>
+
           </Form>
         </Col>
 
