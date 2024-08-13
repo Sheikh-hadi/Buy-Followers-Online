@@ -1,0 +1,29 @@
+.process-container {
+    margin-bottom: 60px;
+    padding-top: 50px;
+  }
+  
+  .process-h1 {
+    font-family: "Fira Sans", sans-serif;
+    font-size: 25px;
+    color: rgb(245, 237, 237);
+    background-color: #b30b0b;
+    border-radius: 5px;
+    padding: 5px 15px;
+    /* display: inline-block; */
+  }
+  
+  .process-h2 {
+    font-size: 40px;
+    color: #173f5f;
+    font-family: "Fira Sans", Sans-serif;
+    font-weight: 700;
+    margin-top: 10px; 
+  }
+  
+  .process-p {
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+  }
+  
