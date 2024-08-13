@@ -15,10 +15,30 @@ body {
     overflow: hidden;
     width: 768px;
     max-width: 100%;
-    min-height: 480px;
+    min-height: 580px;
     display: flex;
     position: relative;
 }
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 0.875rem;
+  }
+  
+  .password-toggle:focus {
+    outline: none;
+  }
+  
+  .password-field {
+    position: relative;
+  }
+  
 
 .form-container {
     position: absolute;
@@ -26,12 +46,13 @@ body {
     height: 100%;
     transition: all 0.6s ease-in-out;
     width: 50%;
-    padding: 1rem;
+    padding: 3rem;
     background-color: #fff;
 }
 
 
 .sign-in {
+    margin-top: 50px;
     left: 0;
     z-index: 2;
     transform: translateX(0); /* Default position for sign-in */
@@ -40,6 +61,7 @@ body {
     text-align: center;
     color: #ea1426;
     font-weight: 700;
+    margin-bottom: 30px;
 }
 .create{
     color: #ea1426;
@@ -177,6 +199,7 @@ body {
     text-transform: uppercase;
     margin-top: 20px;
 }
+
 
 .btn-signin:hover, .btn-signup:hover {
     background-color: white; 
