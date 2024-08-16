@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import { fetchData } from "../Hooks/useGetHandleHook";
 import HomeIntro from "../Compoents/HomeComponent/HomeIntro/HomeIntro";
 import SelService from "../Compoents/HomeComponent/SelectService/SelService";
 import IconCards from "../Compoents/HomeComponent/IconCard/IconCards";
@@ -13,27 +13,13 @@ const Home = () => {
   const [home, setHome] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
+  console.log("home page", home?.intro);
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get("/api/");
-        setHome(response.data);
-        setLoading(false);
-      } catch (error) {
-        console.error(error);
-        setError(error);
-        setLoading(false);
-      }
-    };
-
-    fetchData();
+    fetchData(setLoading, setError, setHome, "http://localhost:8000/api/home");
   }, []);
 
-  // console.log("home in home page: ", home);
-
   if (loading) {
-    return <Skeleton/>;
+    return <Skeleton />;
   }
 
   if (error) {
@@ -42,13 +28,14 @@ const Home = () => {
 
   return (
     <>
-      {Object.keys(home).length ? (
+    
+      {home && Object.keys(home).length ? (
         <div>
-          <HomeIntro intro={home.intro} />
+          <HomeIntro intro={home?.intro} />
           <SelService />
-          <IconCards iconCardArray={home.iconCardArray} />
-          <Process threeStepProcess={home.threeStepProcess} />
-          <Packages cards={home.homePackagescards} />
+          <IconCards iconCardArray={home?.iconCardArray} />
+          <Process threeStepProcess={home?.threeStepProcess} />
+          <Packages cards={home?.homePackagescards} />
           <KeyFeatures />
           <Features />
         </div>
