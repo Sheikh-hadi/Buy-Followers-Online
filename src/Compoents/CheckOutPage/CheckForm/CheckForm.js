@@ -46,7 +46,7 @@ const CheckForm = () => {
                 placeholder="Email Address *"
                 required
                 style={{
-                  width: "460px",
+                  width: "30vw",
                   height: "40px",
                   border: errors.email ? "1px solid red" : "1px solid gray",
                 }}
@@ -67,7 +67,7 @@ const CheckForm = () => {
                 placeholder="Your Name *"
                 required
                 style={{
-                  width: "460px",
+                  width: "30vw",
                   height: "45px",
                   border: errors.name ? "1px solid red" : "1px solid gray",
                 }}
@@ -86,7 +86,7 @@ const CheckForm = () => {
                 placeholder="Your Phone *"
                 required
                 style={{
-                  width: "460px",
+                  width: "30vw",
                   height: "45px",
                   border: errors.phone ? "1px solid red" : "1px solid gray",
                 }}
@@ -105,7 +105,7 @@ const CheckForm = () => {
                 placeholder="@username or post-link *"
                 required
                 style={{
-                  width: "460px",
+                  width: "30vw",
                   height: "45px",
                   border: errors.usernameOrPostLink
                     ? "1px solid red"
@@ -145,7 +145,7 @@ const CheckForm = () => {
                       onChange={(e) => setCardNumber(e.target.value)}
                       onBlur={() => handleBlur("cardNumber")}
                       style={{
-                        width: "400px",
+                        width: "26vw",
                         height: "40px",
                         border: errors.cardNumber
                           ? "1px solid red"
