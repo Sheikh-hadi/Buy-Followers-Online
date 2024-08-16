@@ -1,0 +1,220 @@
+.header-section {
+  margin-bottom: 20px;
+  border: 2px solid black;
+}
+
+.ChComp1 {
+  color: #1a1e23;
+  font-family: "Poppins", Sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.pricbox-heading {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.pricbox-1 {
+  padding: 15px;
+  background-color: crimson;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.form-section-heading {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-top: 30px;
+
+  margin-bottom: 20px;
+}
+
+/* Form input fields */
+.Form-control {
+  border-radius: 5px;
+  padding: 40px;
+  font-size: 1rem;
+}
+
+/* Text for form validation */
+.text-danger {
+  font-size: 0.9em;
+}
+
+/* Button styling */
+.btn-primary {
+  background-color: rgb(223, 49, 49);
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: rgb(223, 49, 49);
+}
+/* PaymentForm.css */
+
+/* Wrapper for the payment form */
+.payment-form-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Container for the payment form */
+.payment-form-container {
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Form section heading */
+.form-section-heading {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Payment card styling */
+.payment-card {
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.payment-card h5 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Form control styling */
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* .form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid gray;
+  border-radius: 5px;
+} */
+
+/* .autofill-btn {
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+} */
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+}
+.input-fild {
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 8px;
+}
+.col-md-6 {
+  width: 48%;
+}
+
+/* Privacy text styling */
+.privacy-text {
+  font-size: 0.9em;
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+/* Place order button styling */
+.place-order-btn {
+  background-color: #f51636;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 1.1em;
+  font-weight: bold;
+  border-radius: 5px;
+  width: 100%;
+}
+.lock {
+  color: #fff;
+}
+
+.place-order-btn:hover {
+  background-color: #f51636;
+}
+
+.autofill-btn {
+  position: absolute;
+  right: 10px;
+  top: 70%;
+  transform: translateY(-50%);
+  background-color: #072b16;
+  color: #00ffab;
+  font-size: 12px;
+  font-weight: bold;
+  border: none;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.autofill-btn:hover {
+  background-color: #044b2b;
+  color: #00e69b;
+}
+.wallet-icon {
+  margin-left: 8px;
+  font-size: 16px;
+  color: #c4cbc9;
+}
+
+/* Stack columns vertically on small screens */
+@media (max-width: 768px) {
+  .container .row {
+    flex-direction: column;
+  }
+
+  .form-group,
+  .payment-card {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+
+  .input-fild {
+    width: 90%;
+    margin-top: 10px;
+  }
+  .form-control {
+    width: 20%;
+  }
+  .col-md-6 {
+    width: 70%;
+    margin-bottom: 10px;
+  }
+
+  .payment-form-container {
+    width: 100%;
+  }
+  
+    .inputcardNumber {
+      width: 90%; /* Adjust width to fit smaller screens */
+      height: 35px; /* Slightly reduce height */
+    }
+  
+}
