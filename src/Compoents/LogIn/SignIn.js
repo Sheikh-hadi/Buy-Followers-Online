@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Col, Form } from "react-bootstrap";
-import HandlePostData from "../../Hooks/usePostHandleHook"; // Make sure this is the correct function name
+import HandlePostData from "../../Hooks/usePostHook"; // Make sure this is the correct function name
 import "../LogIn/Login.css";
 
 const SignIn = () => {

@@ -9,17 +9,17 @@ const HomeIntro = ({ intro }) => {
     <div className="centered-container">
       <div className="row homeintro-main">
         <div className="col-sm-12 col-lg-6">
-          <h1> {intro.introHeeading} </h1>
-          <p>{intro.introText}</p>
+          <h1> {intro?.introHeeading} </h1>
+          <p>{intro?.introText}</p>
           <div className="row homeintro-btn-group">
             <div className="col-sm-12 col-lg-4">
-              <div className="homeintro-btn">{intro.introButtonFirst}</div>
+              <div className="homeintro-btn">{intro?.introButtonFirst}</div>
             </div>
             <div className="col-sm-12 col-lg-4">
-              <div className="homeintro-btn">{intro.introButtonSecond}</div>
+              <div className="homeintro-btn">{intro?.introButtonSecond}</div>
             </div>
             <div className="col-sm-12 col-lg-4">
-              <div className="homeintro-btn">{intro.introButtonThird}</div>
+              <div className="homeintro-btn">{intro?.introButtonThird}</div>
             </div>
           </div>
         </div>
