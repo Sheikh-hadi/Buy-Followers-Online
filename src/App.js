@@ -18,8 +18,8 @@ import BuyTiktokViews from "./Pages/Tiktok/BuyTiktokViews";
 import Blog from "./Pages/Blog";
 import ContactUs from "./Pages/ContactUs";
 import Login from "./Compoents/LogIn/Login";
-import CheckForm from "./Compoents/CheckOut/CheckForm/CheckForm";
-import OrderSummary from "./Compoents/CheckOut/OrderSummary/OrderSummary";
+import CheckOutPage from "./Compoents/CheckOutPage/CheckOutPage";
+
 
 
 
@@ -31,10 +31,9 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="OrderSummary" element={<OrderSummary/>} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/Login" element={<Login/>} />
-          <Route path="/CheckOUT" element={<CheckForm/>} />
+          <Route path="/CheckOut" element={<CheckOutPage/>} />
           <Route path="/instagramfollowers" element={<InstagramFollowers />} />
           <Route path="/instagramlikes" element={<InstagramLikes />} />
           <Route path="/buyinstagramautolikes" element={<BuyInstagramAutoLikes />} />

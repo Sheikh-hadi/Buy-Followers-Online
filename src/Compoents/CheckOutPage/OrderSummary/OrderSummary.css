@@ -1,14 +1,15 @@
-/* OrderSummary.css */
-
-/* General styling for the container */
 .container {
+    max-width: 500px;
     margin: auto;
+    /* margin-bottom: 35px; */
 }
-
+.orderSummery{
+    align-items: center;
+}
 /* Styling for the card */
 .card {
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(227, 222, 222, 0.834);
 }
 
 /* Styling for the headings */
@@ -46,6 +47,7 @@ h4 {
     background-color: #dc3545;
     border: none;
     border-radius: 5px;
+    padding: 0.6em;
 }
 
 .btn-danger:hover {
@@ -54,12 +56,18 @@ h4 {
 
 /* Styling for the coupon input field */
 .form-control {
+    margin-top: 16px;
     border-radius: 5px;
     font-size: 1em;
-    padding: 0.5em;
+    padding: 0.3em;
+    width: 250px;
 }
 
 .form-control::placeholder {
     font-size: 0.9em;
     color: #6c757d;
+}
+.OS_img{
+  padding: 3px;
+  border-radius:3px;
 }
