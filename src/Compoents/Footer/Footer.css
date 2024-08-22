@@ -49,14 +49,18 @@ footer {
   padding: 0;
   font-size: 15px;
   font-weight: 400;
-  text-align: left; /* Align list items to the start */
+  text-align: left;
 }
 
 .footer-section ul li {
   margin-bottom: 10px;
   font-size: 15px;
   color: white;
-  text-align: left; /* Align list items to the start */
+  text-align: left; 
+}
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
 }
 
 .footer-bottom {

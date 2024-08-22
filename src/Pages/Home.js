@@ -10,10 +10,11 @@ import Features from "../Compoents/HomeComponent/Feature/Features";
 import { Skeleton } from "antd";
 
 const Home = () => {
+  const user = false;
   const [home, setHome] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  console.log("home page", home?.intro);
+  // console.log("home page", home);
   useEffect(() => {
     fetchData(setLoading, setError, setHome, "http://localhost:8000/api/home");
   }, []);
@@ -28,16 +29,20 @@ const Home = () => {
 
   return (
     <>
-    
       {home && Object.keys(home).length ? (
         <div>
-          <HomeIntro intro={home?.intro} />
+          <HomeIntro intro={{ intro: home?.intro, user }} />
           <SelService />
           <IconCards iconCardArray={home?.iconCardArray} />
-          <Process threeStepProcess={home?.threeStepProcess} />
+          <Process
+            threeStepProcess={{
+              threeStepProcess: home?.threeStepProcess,
+              user,
+            }}
+          />
           <Packages cards={home?.homePackagescards} />
           <KeyFeatures />
-          <Features />
+          <Features features={home?.features} />
         </div>
       ) : (
         <p>No data available</p>

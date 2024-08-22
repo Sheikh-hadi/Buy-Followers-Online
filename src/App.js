@@ -9,7 +9,7 @@ import AboutUs from "./Pages/AboutUs";
 import InstagramFollowers from "./Pages/Instagram/InstagramFollowers";
 import InstagramLikes from "./Pages/Instagram/InstagramLikes";
 import BuyInstagramAutoLikes from "./Pages/Instagram/BuyInstagramAutoLikes";
-import BuyInstagramAutoReels from "./Pages/Instagram/BuyInstagramAutoReels"
+import BuyInstagramAutoReels from "./Pages/Instagram/BuyInstagramAutoReels";
 
 import BuyTiktokFollowers from "./Pages/Tiktok/BuyTiktokFollowers";
 import BuyTiktokLikes from "./Pages/Tiktok/BuyTiktokLikes";
@@ -20,37 +20,52 @@ import ContactUs from "./Pages/ContactUs";
 import Login from "./Compoents/LogIn/Login";
 import CheckOutPage from "./Compoents/CheckOutPage/CheckOutPage";
 
-
-
-
 const App = () => {
   return (
-    <>
+    <BrowserRouter>
+      <Routes>
+        {/* Login Route */}
+        <Route path="/Login" element={<Login />} />
 
-    <Header/>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/Login" element={<Login/>} />
-          <Route path="/CheckOut" element={<CheckOutPage/>} />
-          <Route path="/instagramfollowers" element={<InstagramFollowers />} />
-          <Route path="/instagramlikes" element={<InstagramLikes />} />
-          <Route path="/buyinstagramautolikes" element={<BuyInstagramAutoLikes />} />
-          <Route path="/buyinstagramautoreels" element={<BuyInstagramAutoReels />} />
-
-          <Route path="/buytiktokfollowers" element={<BuyTiktokFollowers/>}/>
-          <Route path="/buytiktoklikes" element={<BuyTiktokLikes/>}/>
-          <Route path="/buytiktokviews" element={<BuyTiktokViews/>}/>
-
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/contactUs" element={<ContactUs />} />
-        </Routes>
-      </BrowserRouter>
-      <Footer/>
-    </>
+        {/* Other Routes */}
+        <Route
+          path="*"
+          element={
+            <>
+              <Header />
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<AboutUs />} />
+                <Route path="/CheckOut" element={<CheckOutPage />} />
+                <Route
+                  path="/instagramfollowers"
+                  element={<InstagramFollowers />}
+                />
+                <Route path="/instagramlikes" element={<InstagramLikes />} />
+                <Route
+                  path="/buyinstagramautolikes"
+                  element={<BuyInstagramAutoLikes />}
+                />
+                <Route
+                  path="/buyinstagramautoreels"
+                  element={<BuyInstagramAutoReels />}
+                />
+                <Route
+                  path="/buytiktokfollowers"
+                  element={<BuyTiktokFollowers />}
+                />
+                <Route path="/buytiktoklikes" element={<BuyTiktokLikes />} />
+                <Route path="/buytiktokviews" element={<BuyTiktokViews />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/contactUs" element={<ContactUs />} />
+              </Routes>
+              <Footer />
+            </>
+          }
+        />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
-

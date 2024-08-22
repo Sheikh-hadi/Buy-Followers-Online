@@ -33,8 +33,7 @@ const SelService = () => {
       title: `Buy ${changeTitle} Followers`,
       description: descriptionListCard,
       price: "$1.99",
-      avaster:
-       "https://avatars.dicebear.com/api/human/random.svg",
+      avaster: "https://avatars.dicebear.com/api/human/random.svg",
       link: `https://buyfollowersaustralia.com/buy-${changeTitle}-followers/`,
     },
     {
@@ -42,8 +41,7 @@ const SelService = () => {
       title: `Buy ${changeTitle} Auto Likes`,
       description: descriptionListCard,
       price: "$1.99",
-      avaster:
-       "https://avatars.dicebear.com/api/human/random.svg",
+      avaster: "https://avatars.dicebear.com/api/human/random.svg",
       link: `https://buyfollowersaustralia.com/buy-${changeTitle}-followers/`,
     },
     {
@@ -51,8 +49,7 @@ const SelService = () => {
       title: `Buy ${changeTitle} Likes`,
       description: descriptionListCard,
       price: "$1.99",
-      avaster:
-       "https://avatars.dicebear.com/api/human/random.svg",
+      avaster: "https://avatars.dicebear.com/api/human/random.svg",
       link: `https://buyfollowersaustralia.com/buy-${changeTitle}-followers/`,
     },
     {
@@ -60,8 +57,7 @@ const SelService = () => {
       title: `Buy ${changeTitle} Views`,
       description: descriptionListCard,
       price: "$1.99",
-      avaster:
-       "https://avatars.dicebear.com/api/human/random.svg",
+      avaster: "https://avatars.dicebear.com/api/human/random.svg",
       link: `https://buyfollowersaustralia.com/buy-${changeTitle}-followers/`,
     },
   ];
@@ -135,17 +131,25 @@ const SelService = () => {
               size="small"
               title={<span style={{ color: "#f51636" }}>{card.title}</span>}
             >
-              <Title className="ListPrice">{card.price}</Title>
+              <Title style={{ color: "#173f5f" }} className="ListPrice">
+                {card.price}
+              </Title>
               <List
+              style={{ color: "#5e6d64",}}
                 bordered={false}
                 itemLayout="horizontal"
                 dataSource={card.description}
                 renderItem={(item) => (
                   <List.Item
-                    style={{ padding: "3px", margin: "0", border: "none" }}
+                    style={{
+                      padding: "3px",
+                      margin: "0",
+                      border: "none",
+                     
+                    }}
                   >
                     <List.Item.Meta
-                      avatar={<Avatar src={card.avatar} />}
+                      avatar={<Avatar src={tikimg} />}
                       title={
                         <span className="listColor" style={{ lineHeight: "1" }}>
                           {item}

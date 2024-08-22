@@ -19,24 +19,28 @@ const CheckForm = () => {
     let tempErrors = { ...errors };
 
     // Basic field validations
-    if (field === "email" && !email) tempErrors.email = "Email Address is required";
+    if (field === "email" && !email)
+      tempErrors.email = "Email Address is required";
     if (field === "name" && !name) tempErrors.name = "Your Name is required";
-    if (field === "phone" && !phone) tempErrors.phone = "Your Phone is required";
+    if (field === "phone" && !phone)
+      tempErrors.phone = "Your Phone is required";
     if (field === "usernameOrPostLink" && !usernameOrPostLink)
       tempErrors.usernameOrPostLink = "@username or post-link is required";
 
     // Payment field validations
-    if (field === "cardNumber" && !cardNumber) tempErrors.cardNumber = "Card Number is required";
-    if (field === "expiryDate" && !expiryDate) tempErrors.expiryDate = "Expiry Date is required";
+    if (field === "cardNumber" && !cardNumber)
+      tempErrors.cardNumber = "Card Number is required";
+    if (field === "expiryDate" && !expiryDate)
+      tempErrors.expiryDate = "Expiry Date is required";
     if (field === "cvc" && !cvc) tempErrors.cvc = "Card Code (CVC) is required";
 
     setErrors(tempErrors);
   };
 
   return (
-    <div className="container">
-      <Row>
-        <Col>
+    <div>
+      <Row style={{ padding: "0px 10%" }}>
+        <Col span={24}>
           <Form>
             {/* Customer Information Section */}
             <h4 className="form-section-heading">Customer Information</h4>
@@ -46,7 +50,7 @@ const CheckForm = () => {
                 placeholder="Email Address *"
                 required
                 style={{
-                  width: "30vw",
+                  width: "100%",
                   height: "40px",
                   border: errors.email ? "1px solid red" : "1px solid gray",
                 }}
@@ -67,8 +71,8 @@ const CheckForm = () => {
                 placeholder="Your Name *"
                 required
                 style={{
-                  width: "30vw",
-                  height: "45px",
+                  width: "100%",
+                  height: "40px",
                   border: errors.name ? "1px solid red" : "1px solid gray",
                 }}
                 value={name}
@@ -86,8 +90,8 @@ const CheckForm = () => {
                 placeholder="Your Phone *"
                 required
                 style={{
-                  width: "30vw",
-                  height: "45px",
+                  width: "100%",
+                  height: "40px",
                   border: errors.phone ? "1px solid red" : "1px solid gray",
                 }}
                 value={phone}
@@ -105,8 +109,8 @@ const CheckForm = () => {
                 placeholder="@username or post-link *"
                 required
                 style={{
-                  width: "30vw",
-                  height: "45px",
+                  width: "100%",
+                  height: "40px",
                   border: errors.usernameOrPostLink
                     ? "1px solid red"
                     : "1px solid gray",
@@ -145,7 +149,7 @@ const CheckForm = () => {
                       onChange={(e) => setCardNumber(e.target.value)}
                       onBlur={() => handleBlur("cardNumber")}
                       style={{
-                        width: "26vw",
+                        width: "100%",
                         height: "40px",
                         border: errors.cardNumber
                           ? "1px solid red"
@@ -172,6 +176,8 @@ const CheckForm = () => {
                         onChange={(e) => setExpiryDate(e.target.value)}
                         onBlur={() => handleBlur("expiryDate")}
                         style={{
+                          width: "100%",
+                          height: "40px",
                           border: errors.expiryDate
                             ? "1px solid red"
                             : "1px solid gray",
@@ -195,7 +201,11 @@ const CheckForm = () => {
                         onChange={(e) => setCvc(e.target.value)}
                         onBlur={() => handleBlur("cvc")}
                         style={{
-                          border: errors.cvc ? "1px solid red" : "1px solid gray",
+                          width: "100%",
+                          height: "40px",
+                          border: errors.cvc
+                            ? "1px solid red"
+                            : "1px solid gray",
                         }}
                       />
                       {errors.cvc && (
@@ -206,9 +216,9 @@ const CheckForm = () => {
 
                   {/* Privacy Statement */}
                   <p className="privacy-text">
-                    Your personal data will be used to process your order, support
-                    your experience throughout this website, and for other purposes
-                    described in our privacy policy.
+                    Your personal data will be used to process your order,
+                    support your experience throughout this website, and for
+                    other purposes described in our privacy policy.
                   </p>
 
                   {/* Submit Button */}

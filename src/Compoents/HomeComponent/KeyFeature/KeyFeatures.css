@@ -19,7 +19,7 @@
   
   .key-features-description {
     font-size: 16px;
-    color: #555;
+    color: #5e6d64;
     margin-bottom: 20px;
   }
   
@@ -27,6 +27,7 @@
     font-size: 20px;
     color: #173f5f;
     margin-bottom: 15px;
+    font-weight: 700;
   }
   
   .feature-item {
@@ -37,7 +38,7 @@
   
   .feature-number {
     font-size: 40px;
-    color: #b30b0b;
+    color: #F51636;
     margin-right: 10px;
   }
   
@@ -45,10 +46,11 @@
     font-size: 18px;
     color: #173f5f;
     margin-bottom: 5px;
+    font-weight: 700;
   }
   
   .feature-description {
     font-size: 16px;
-    color: #555;
+    color: #5e6d64;
   }
   

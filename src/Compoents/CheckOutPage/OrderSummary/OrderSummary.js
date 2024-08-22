@@ -4,10 +4,25 @@ import { Col, Image, Row } from "antd";
 
 const OrderSummary = () => {
   return (
-    <div className="container mt-5" style={{ border: "2px solid lightgray", borderRadius:"5px" ,padding:"3px" }}>
-      <Row className="orderSummery align-items-center" style={{padding:"20px"}}>
+    <div
+      className="container mt-5"
+      style={{
+        border: "2px solid lightgray",
+        borderRadius: "5px",
+        padding: "3px",
+      }}
+    >
+      <Row
+        className="orderSummery align-items-center"
+        style={{
+          paddingTop: "20px",
+          paddingLeft: "20px",
+          paddingRight: "20px",
+          paddingBottom: "5px",
+        }}
+      >
         <Col>
-          <Row className=" justify-content-between align-items-center " >
+          <Row className=" justify-content-between align-items-center ">
             <Col>
               <p>Product</p>
             </Col>
@@ -15,7 +30,7 @@ const OrderSummary = () => {
               <p>Subtotal</p>
             </Col>
           </Row>
-          <hr/>
+          <hr />
           <Row className="align-items-center">
             <Col>
               <Row className="align-items-center">
@@ -23,13 +38,18 @@ const OrderSummary = () => {
                   <Image
                     src="sample.jfif"
                     alt="Product"
-                    style={{ width: "50px", height: "50px", objectFit: "cover" }}
+                    style={{
+                      width: "50px",
+                      height: "50px",
+                      objectFit: "cover",
+                    }}
                     className="img-fluid"
                   />
                 </Col>
                 <Col lg={12}>
                   <p className="text-muted mb-0 small">
-                    Get Instant Fame with Buy Instagram Followers in Australia - 2500
+                    Get Instant Fame with Buy Instagram Followers in Australia -
+                    2500
                   </p>
                 </Col>
                 <Col offset={1} lg={5}>
@@ -41,8 +61,8 @@ const OrderSummary = () => {
               </Row>
             </Col>
           </Row>
-         
-          <hr/>
+
+          <hr />
           <Row className="justify-content-between align-items-center">
             <Col>
               <p>Subtotal</p>
@@ -51,7 +71,7 @@ const OrderSummary = () => {
               <p>$24.99</p>
             </Col>
           </Row>
-          <hr/>
+          <hr />
           <Row className="justify-content-between align-items-center">
             <Col>
               <h2>Total</h2>
@@ -61,21 +81,19 @@ const OrderSummary = () => {
             </Col>
           </Row>
           <Row className="justify-content-between align-items-center">
-                    <div className="col-7">
-                        <input 
-                            type="text" 
-                            className="form-control" 
-                            placeholder="Coupon Code" 
-                        />
-                    </div>
-                    <div className="col-4">
-                        <button className="btn btn-danger w-100">Apply</button>
-                    </div>
-                </Row>
+            <div className="col-7">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Coupon Code"
+              />
+            </div>
+            <div className="col-4">
+              <button className="btn btn-danger w-100">Apply</button>
+            </div>
+          </Row>
         </Col>
-        
       </Row>
-      
     </div>
   );
 };

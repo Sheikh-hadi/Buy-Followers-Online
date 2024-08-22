@@ -7,15 +7,19 @@ const HandlePostData = async (path, data) => {
         "Content-Type": "application/json",
       },
     });
-    console.log("Path: ", path, "data: ", data);
-    console.log("Success:", response.data);
+    // console.log("Path: ", path, "Data: ", data);
+    // console.log("Success:", response);
+    // console.log("Success:", response.data);
+    // console.log("Status Code:", response.status); 
     return response; // Return the response data
   } catch (error) {
-    console.error(
-      "Error:",
-      error.response ? error?.response?.data  : error?.message
-    );
-    return error.response ? error?.response?.data : error?.message; // Return the error message
+    if (error.response) {
+      // console.error("Status Code:", error.response.status); 
+      return error.response.status; 
+    } else {
+      // console.error("Error:", error.message);
+      return { message: error.message }; 
+    }
   }
 };
 

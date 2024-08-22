@@ -4,7 +4,7 @@ import "./Pricing.css";
 const Pricing = (props) => {
   const [selectedBox, setSelectedBox] = useState(null);
   let value = props.price;
-  console.log("value: ", value);
+  console.log("value: ", value, props);
 
   const selectBox = (box) => {
     if (selectedBox === box) {
@@ -26,8 +26,8 @@ const Pricing = (props) => {
     <div className="container" style={{ marginTop: "-60px" }}>
       <div className="row" >
         <div className="col-lg-6" >
-          <h1 className="Heading" >{value.title}</h1>
-          <p className="para1" >{value.description}</p>
+          <h1 className="Heading" >{value?.title}</h1>
+          <p className="para1" >{value?.description}</p>
           <div className="btn-1">
             <button className="butn" onClick={buyNow}>
               READ MORE
@@ -42,8 +42,8 @@ const Pricing = (props) => {
                 className={`inner-box ${selectedBox === box ? "selected" : ""}`}
                 onClick={() => selectBox(box)}
               >
-                <h6 className="box-num">{box.Number}</h6>
-                <p className="box-para">{box.title}</p>
+                <h6 className="box-num">{box?.number}</h6>
+                <p className="box-para">{box?.title}</p>
               </div>
             ))}
             <div className="output-container">

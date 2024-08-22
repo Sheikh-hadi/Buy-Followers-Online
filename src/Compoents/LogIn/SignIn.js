@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import { Col, Form } from "react-bootstrap";
 import HandlePostData from "../../Hooks/usePostHook"; // Make sure this is the correct function name
 import "../LogIn/Login.css";
 
 const SignIn = () => {
+  const navigate = useNavigate();
   const [signInData, setSignInData] = useState({
     email: "",
     password: "",
@@ -28,13 +30,14 @@ const SignIn = () => {
         signInData
       );
 
-      if (response.success) {
+      if (response?.data?.success) {
         // Reset form fields if the login is successful
         setSignInData({
           email: "",
           password: "",
         });
         alert("Successfully Logged In: " + response?.data?.message);
+      navigate("/");
       } else {
         alert("Login failed: " + response?.data?.message);
       }
