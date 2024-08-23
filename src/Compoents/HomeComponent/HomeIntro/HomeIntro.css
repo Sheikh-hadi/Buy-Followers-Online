@@ -49,6 +49,8 @@
 .img-fluid {
   max-width: 100%;
   height: 400px;
+  display: inline-block;
+  padding-left: 40px;
 }
 
 @media (max-width: 786px) {
