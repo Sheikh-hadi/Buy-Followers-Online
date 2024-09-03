@@ -2,7 +2,9 @@ import React from "react";
 import "./OrderSummary.css";
 import { Col, Image, Row } from "antd";
 
-const OrderSummary = () => {
+const OrderSummary = ({ product }) => {
+  let total = 0;
+
   return (
     <div
       className="container mt-5"
@@ -13,7 +15,7 @@ const OrderSummary = () => {
       }}
     >
       <Row
-        className="orderSummery align-items-center"
+        className="orderSummary align-items-center"
         style={{
           paddingTop: "20px",
           paddingLeft: "20px",
@@ -22,43 +24,87 @@ const OrderSummary = () => {
         }}
       >
         <Col>
-          <Row className=" justify-content-between align-items-center ">
+          <Row className="justify-content-between align-items-center">
             <Col>
               <p>Product</p>
             </Col>
             <Col>
-              <p>Subtotal</p>
+              <p>Amount</p>
             </Col>
           </Row>
           <hr />
           <Row className="align-items-center">
             <Col>
-              <Row className="align-items-center">
-                <Col lg={4}>
-                  <Image
-                    src="sample.jfif"
-                    alt="Product"
-                    style={{
-                      width: "50px",
-                      height: "50px",
-                      objectFit: "cover",
-                    }}
-                    className="img-fluid"
-                  />
-                </Col>
-                <Col lg={12}>
-                  <p className="text-muted mb-0 small">
-                    Get Instant Fame with Buy Instagram Followers in Australia -
-                    2500
-                  </p>
-                </Col>
-                <Col offset={1} lg={5}>
-                  <p className="mb-0">× 1</p>
-                </Col>
-                <Col lg={2}>
-                  <p className="mb-0">$24.99</p>
-                </Col>
-              </Row>
+              {product && product.length > 0 ? (
+                product.map((item, index) => {
+                  total += item.price || 0;
+                  return (
+                    <Row
+                      key={index}
+                      className="align-items-center"
+                      style={{
+                        marginBottom: "10px",
+                      }}
+                    >
+                      <Col lg={4}>
+                        <Image
+                          src={item.image || "sample.jfif"}
+                          alt="Product"
+                          style={{
+                            width: "50px",
+                            height: "50px",
+                            objectFit: "cover",
+                          }}
+                          className="img-fluid"
+                        />
+                      </Col>
+                      <Col lg={12}>
+                        <p className="text-muted mb-0 small">
+                          Get Instant Fame with Buy Instagram{" "}
+                          {item.title || "Product Title"} in Australia -
+                          {item.number || "0"}
+                          {item.description || ""}
+                        </p>
+                      </Col>
+                      <Col offset={1} lg={5}>
+                        <p className="mb-0">× {item.quantity || 1}</p>
+                      </Col>
+                      <Col lg={2}>
+                        <p className="mb-0">${item.price || "0.00"}</p>
+                      </Col>
+                    </Row>
+                  );
+                })
+              ) : (
+                <Row
+                  className="align-items-center"
+                  style={{ border: "2px solid black" }}
+                >
+                  <Col lg={4}>
+                    <Image
+                      src="sample.jfif"
+                      alt="Product"
+                      style={{
+                        width: "50px",
+                        height: "50px",
+                        objectFit: "cover",
+                      }}
+                      className="img-fluid"
+                    />
+                  </Col>
+                  <Col lg={12}>
+                    <p className="text-muted mb-0 small">
+                      No products available
+                    </p>
+                  </Col>
+                  <Col offset={1} lg={5}>
+                    <p className="mb-0">× 0</p>
+                  </Col>
+                  <Col lg={2}>
+                    <p className="mb-0">$0.00</p>
+                  </Col>
+                </Row>
+              )}
             </Col>
           </Row>
 
@@ -68,7 +114,7 @@ const OrderSummary = () => {
               <p>Subtotal</p>
             </Col>
             <Col>
-              <p>$24.99</p>
+              <p>{total}</p>
             </Col>
           </Row>
           <hr />
@@ -77,7 +123,7 @@ const OrderSummary = () => {
               <h2>Total</h2>
             </Col>
             <Col>
-              <h2>$24.99</h2>
+              <h2>{total}</h2>
             </Col>
           </Row>
           <Row className="justify-content-between align-items-center">

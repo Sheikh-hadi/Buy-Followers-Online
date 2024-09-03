@@ -6,7 +6,7 @@ const { Panel } = Collapse;
 
 const Accordian = (props) => {
   const { left, right } = props?.accordian;
-  console.log("props: ", props);
+  // console.log("props: ", props);
   const [activeKeyLeft, setActiveKeyLeft] = useState([]);
   const [activeKeyRight, setActiveKeyRight] = useState([]);
 

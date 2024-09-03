@@ -2,7 +2,7 @@ import React from "react";
 
 const FourPackages = (props) => {
   let cardList = props.card;
-  console.log("cardList: ", cardList);
+  // console.log("cardList: ", cardList);
 
   return (
     <div className="container">

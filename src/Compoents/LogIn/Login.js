@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import "./Login.css";
-import SignUp from "./signUp";
-import SignIn from "./SignIn";
+import SignUp from "../SignUp/signUp";
+import SignIn from "../SignUp/SignIn";
 
 const Login = () => {
   const [active, setActive] = useState(false);

@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./Pricing.css";
+import { useNavigate } from "react-router-dom";
 
-const Pricing = (props) => {
+const Pricing = ({ price, handleProduct }) => {
+  const navigate = useNavigate();
   const [selectedBox, setSelectedBox] = useState(null);
-  let value = props.price;
-  console.log("value: ", value, props);
-
+  // console.log("selectedBox: ", selectedBox);
+  console.log("price: ", price);
   const selectBox = (box) => {
     if (selectedBox === box) {
       setSelectedBox(null);
@@ -15,19 +16,19 @@ const Pricing = (props) => {
   };
 
   const buyNow = () => {
-    if (selectedBox) {
-      window.location.href = selectedBox.link;
-    } else {
+    handleProduct(selectedBox);
+    if (!selectedBox) {
       alert("Please select an option first.");
     }
+    navigate("/checkout");
   };
 
   return (
     <div className="container" style={{ marginTop: "-60px" }}>
-      <div className="row" >
-        <div className="col-lg-6" >
-          <h1 className="Heading" >{value?.title}</h1>
-          <p className="para1" >{value?.description}</p>
+      <div className="row">
+        <div className="col-lg-6">
+          <h1 className="Heading">{price?.title}</h1>
+          <p className="para1">{price?.description}</p>
           <div className="btn-1">
             <button className="butn" onClick={buyNow}>
               READ MORE
@@ -36,13 +37,14 @@ const Pricing = (props) => {
         </div>
         <div className="col-lg-6">
           <div className="main-box">
-            {value.boxes.map((box, index) => (
+            {price.boxes.map((box, index) => (
               <div
                 key={index}
                 className={`inner-box ${selectedBox === box ? "selected" : ""}`}
                 onClick={() => selectBox(box)}
               >
-                <h6 className="box-num">{box?.number}</h6>
+              
+                <h6 className="box-num">{box?.number }</h6>
                 <p className="box-para">{box?.title}</p>
               </div>
             ))}

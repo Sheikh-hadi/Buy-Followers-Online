@@ -5,14 +5,14 @@ import Packages from "../../CommonComponent/Package/Packages";
 import ImageContentBlock from "../../CommonComponent/ImageContentBlock/ImageContentBlock";
 import Accordian from "../../CommonComponent/Accordian/Accordian";
 
-import FAQ from "../../Compoents/FAQ/FAQ";
+import FAQ from "../../CommonComponent/FAQ/FAQ";
 import FourPackages from "../../CommonComponent/FourPackages/FourPackages";
 import InstagramFollowersText from "../../Compoents/InstaFollowerReaminngComp/Comp1/Comp1";
 import PickUp from "../../Compoents/InstaFollowerReaminngComp/PickUp/PickUp";
 import UpdatedBenefits from "../../Compoents/InstaFollowerReaminngComp/UpdatedBenefits/UpdatedBenefits";
 import { Skeleton } from "antd";
 
-const InstagramFollowers = () => {
+const InstagramFollowers = ({ handleProduct }) => {
   // const user = true;
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -39,7 +39,7 @@ const InstagramFollowers = () => {
     <>
       {data && Object.keys(data).length ? (
         <>
-          <Pricing price={data?.pricing} />
+          <Pricing price={data?.pricing} handleProduct={handleProduct} />
           <InstagramFollowersText text={data?.firstText} />
           <Packages cards={data?.threeCard} />
           <ImageContentBlock block={data?.imageContentBlockFirst} />

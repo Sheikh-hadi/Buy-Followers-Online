@@ -3,7 +3,7 @@ import { fetchData } from "../../Hooks/useGetHandleHook";
 import Pricing from "../../CommonComponent/Pricing/Pricing";
 
 import { Skeleton } from "antd";
-const BuyInstagramAutoLikes = () => {
+const BuyInstagramAutoLikes = ({ handleProduct }) => {
   // const user = true;
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -29,7 +29,7 @@ const BuyInstagramAutoLikes = () => {
     <>
       {data && Object.keys(data).length ? (
         <>
-          <Pricing price={data?.pricing} />
+          <Pricing price={data?.pricing} handleProduct={handleProduct} />
         </>
       ) : (
         <p>No data available</p>

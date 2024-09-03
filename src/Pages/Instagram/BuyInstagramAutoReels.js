@@ -7,7 +7,7 @@ import PricingList from "../../CommonComponent/PricingListComponent/PricingList"
 import UpdatedBenefits from "./../../Compoents/InstaFollowerReaminngComp/UpdatedBenefits/UpdatedBenefits";
 import ChooseServices from "../../Compoents/BuyInstagramReelsLikes/ChooseServices/ChooseServices";
 import { Skeleton } from "antd";
-const BuyInstagramAutoReels = () => {
+const BuyInstagramAutoReels = ({ handleProduct }) => {
   // const user = true;
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -34,7 +34,7 @@ const BuyInstagramAutoReels = () => {
     <>
       {data && Object.keys(data).length ? (
         <>
-          <PricingList price={data?.pricing} />
+          <PricingList price={data?.pricing} handleProduct={handleProduct} />
           <UpdatedBenefits />
 
           <ChooseServices text={data?.firstText} />

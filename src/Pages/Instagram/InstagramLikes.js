@@ -6,14 +6,13 @@ import ImageContentBlock from "../../CommonComponent/ImageContentBlock/ImageCont
 import Accordian from "../../CommonComponent/Accordian/Accordian";
 import Comp1 from "../../Compoents/InstaFollowerReaminngComp/Comp1/Comp1";
 import PickUp from "../../Compoents/InstaFollowerReaminngComp/PickUp/PickUp";
-import FAQ from "../../Compoents/FAQ/FAQ";
+import FAQ from "../../CommonComponent/FAQ/FAQ";
 import { Skeleton } from "antd";
-const InstagramLikes = () => {
-  // const user = true;
+const InstagramLikes = ({ handleProduct }) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-//   console.log("Data in Instagram likes page", data);
+  //   console.log("Data in Instagram likes page", data);
   useEffect(() => {
     fetchData(
       setLoading,
@@ -35,7 +34,7 @@ const InstagramLikes = () => {
     <>
       {data && Object.keys(data).length ? (
         <>
-          <Pricing price={data?.pricing} />
+          <Pricing price={data?.pricing} handleProduct={handleProduct} />
           <Comp1 text={data?.firstText} />
           <Packages cards={data?.threeCard} />
           <PickUp text={data.secondText} />

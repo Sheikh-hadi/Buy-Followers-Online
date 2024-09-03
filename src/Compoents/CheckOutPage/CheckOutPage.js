@@ -4,7 +4,7 @@ import "./CheckOutPage.css"; // Import CSS for styling
 import CheckForm from "./CheckForm/CheckForm";
 import OrderSummary from "./OrderSummary/OrderSummary";
 
-const CheckOutPage = () => {
+const CheckOutPage = ({ product }) => {
   return (
     <div>
       <h1
@@ -39,7 +39,7 @@ const CheckOutPage = () => {
             xxl={10}
             className="right-column"
           >
-            <OrderSummary />
+            <OrderSummary product={product} />
           </Col>
         </Row>
       </div>

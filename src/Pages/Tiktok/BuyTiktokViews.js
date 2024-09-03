@@ -1,11 +1,11 @@
-import React from 'react'
-import Pricing from '../../CommonComponent/Pricing/Pricing'
-import buyTiktokViewPricingModel from '../../Model/PricingModel/Tiktok/buyTiktokViewsPricingModel'
+import React from "react";
+import Pricing from "../../CommonComponent/Pricing/Pricing";
+import buyTiktokViewPricingModel from "../../Model/PricingModel/Tiktok/buyTiktokViewsPricingModel";
 
-const BuyTiktokViews = () => {
+const BuyTiktokViews = ({ handleProduct }) => {
   return (
-  <Pricing price={buyTiktokViewPricingModel}/>
-  )
-}
+    <Pricing price={buyTiktokViewPricingModel} handleProduct={handleProduct} />
+  );
+};
 
-export default BuyTiktokViews
+export default BuyTiktokViews;
